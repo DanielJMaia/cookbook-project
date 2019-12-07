@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GF Recipes!</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Solway&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css" />
+</head>
+
+<body>
+  <header>  
+    <nav class="white">
+        <div class="nav-wrapper">
+            <a href="{{url_for('home')}}" class="brand-logo center black-text">Celiac Haven</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger show-on-large"><i class="material-icons black-text">menu</i></a>
+            
+        </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="{{url_for('home')}}">Home</a></li>
+        <li><a href="{{url_for('add_recipe')}}">Add A Recipe</a></li>
+        <li><a href="{{url_for('get_recipe')}}">Breakfast</a></li>
+        <li><a href="collapsible.html">Easy Meals</a></li>
+        <li><a href="sass.html">Smoothies & Shakes</a></li>
+        <li><a href="badges.html">Fancy Dishes On A Budget</a></li>
+        <li><a href="collapsible.html">No Oven Needed</a></li>
+        <li><a href="collapsible.html">Deserts</a></li>
+        <li><a href="{{url_for('test')}}">Test Page</a></li>
+    </ul>
+
+</header>
+<main>
+    {% block content %} {% endblock %}
+</main>
+
+    <footer class="page-footer pink lighten-4">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="black-text">Footer Content</h5>
+                    <p class="black-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="black-text">Links</h5>
+                    <ul>
+                        <li><a class="black-text text-lighten-3" href="#!">Link 1</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2019 Copyright Text
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript" src="/static/js/initialization.js"></script>
+    
+</body>
+
+</html>
