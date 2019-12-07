@@ -1,0 +1,23 @@
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    font-family: 'Solway', 'Merriweather', serif;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+  
+  #quote {
+    background-image: url("/static/img/quote_background.jpg");
+    background-size: cover;
+    padding-top: 300px;
+    text-align: center;
+    height: 850px;
+  }
+  
+  .card-title {
+    color: #000 !important;
+  }
+  
