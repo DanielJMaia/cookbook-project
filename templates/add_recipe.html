@@ -1,59 +1,80 @@
 {% extends 'base.html' %} {% block content %}
 
-<h3 class="center-align">Recipe Submission</h3>
+<h3 class="center-align" id="submit_recipe_header">Recipe Submission</h3>
 <div class="container">
     <div class="row">
         <form class="col s12 m6 ">
-            <div class="input-field col s12">
-                <input id="recipe_title" type="text" class="validate">
-                <label for="recipe_title">Recipe Title</label>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="recipe_title" type="text" class="validate">
+                    <label for="recipe_title">Recipe Title</label>
+                </div>
             </div>
-            <div class="input-field col s12">
-                <select>
-                {% for category in categories %}
-                    <option value="{{ category.category }}">{{ category.category }}</option>
-                {% endfor %}
-                </select>
-                <label>Choose A Category!</label>
+            <div class="row">
+                <div class="input-field col s12">
+                    <select>
+                        {% for category in categories %}
+                            <option value="{{ category.category }}">{{ category.category }}</option>
+                        {% endfor %}
+                        </select>
+                    <label>Choose A Category!</label>
+                </div>
             </div>
-            <div class="input-field col s12">
-                <select>
+            <div class="row">
+                <div class="input-field col s12">
+                    <select>
                     {% for diff in difficulty %}
                     <option value="{{ diff.difficulty }}">{{ diff.difficulty }}</option>
                     {% endfor %}
                 </select>
-                <label>Ease of Preparation</label>
-            </div>
-            <div class="input-field col s12">
-                <input id="gf_ingredient" type="text" class="validate">
-                <label for="gf_ingredient">Gluten Free Replacements</label>
-            </div>
-            <div class="input-field col s12">
-                <input id="ingredients" type="text" class="validate">
-                <label for="ingredients">Ingredients</label>
-            </div>
-            <div class="input-field col s12">
-                <input id="duration" type="text" class="validate">
-                <label for="duration">Duration</label>
-            </div>
-        </form>
-        <div class="col s12 m6 xl5 ">
-            <div class="card">
-                <div class="card-image">
-                    <img src="static/img/upload2.png" class="image">
-                    <span class="card-title"><a class="waves-effect waves-light btn">Choose files to Upload</a></span>
-                </div>
-                <div class="card-content">
-                    <p>Or drop them here</p>
+                    <label>Ease of Preparation</label>
                 </div>
             </div>
-        </div>
-        <form class="col s12">
-            <div class="input-field col s12">
+            <div class="row">
+                <div class="input-field col s8">
+                    <input id="gf_ingredient" type="text" class="validate">
+                    <label for="gf_ingredient">Gluten Free Replacements</label>
+                </div>
+                <div class="col s4 center-align button_align_horizontal">
+                    <a class="waves-effect waves-light btn">button</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s8">
+                    <input id="ingredients" type="text" class="validate">
+                    <label for="ingredients">Ingredients</label>
+                </div>
+                <div class="col s4 center-align button_align_horizontal">
+                    <a class="waves-effect waves-light btn">button</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="duration" type="text" class="validate">
+                    <label for="duration">Duration</label>
+                </div>
+            </div>
+            <div class="input-field col s8">
                 <textarea id="textarea1" class="materialize-textarea"></textarea>
                 <label for="textarea1">Method</label>
             </div>
+            <div class="col s4 center-align">
+                <a class="waves-effect waves-light btn">button</a>
+            </div>
         </form>
+
+
+        <div class="col s12 m6 xl5 ">
+            <div class="card">
+                <div class="card-image">
+                    <img src="static/img/upload.jpg" class="image" id="upload_image">
+                </div>
+                <div class="card-content">
+                    <span class="card-title"><a class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>Choose files to Upload</a></span>
+                </div>
+            </div>
+        </div>
+       
     </div>
 </div>
 
