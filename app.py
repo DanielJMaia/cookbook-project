@@ -21,12 +21,11 @@ def home():
 @app.route('/get_recipes')
 def get_recipe():
     return render_template("recipes.html",
-    recipes=mongo.db.recipes.find())
+    recipes=mongo.db.recipes.find({"category": "Smoothies and Shakes"}))
     
 @app.route('/add_recipe')
 def add_recipe():
     return render_template("add_recipe.html",
-    recipes=mongo.db.recipes.find(),
     categories=mongo.db.categories.find(),
     difficulty=mongo.db.difficulty.find())
     
@@ -34,7 +33,7 @@ def add_recipe():
 def insert_recipe():
     recipes = mongo.db.recipes
     recipes.insert_one(request.form.to_dict())
-    return redirect(url_for('/'))
+    return redirect(url_for('home'))
     
 # Test Page Route
 
