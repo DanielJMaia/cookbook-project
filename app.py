@@ -21,7 +21,7 @@ def home():
 @app.route('/get_recipes')
 def get_recipe():
     return render_template("recipes.html",
-    recipes=mongo.db.recipes.find({"category": "Smoothies and Shakes"}))
+    recipes=mongo.db.recipes.find({"category": "Breakfast"}))
     
 @app.route('/add_recipe')
 def add_recipe():
@@ -39,8 +39,26 @@ def insert_recipe():
 def edit_recipe(recipe_id):
     _recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     _categories = mongo.db.categories.find()
+    _difficulty = mongo.db.difficulty.find()
     category_list = [category for category in _categories]
-    return render_template('edit_recipe.html', recipe=_recipe, categories=category_list)
+    return render_template('edit_recipe.html', recipe=_recipe, categories=category_list, difficulty=_difficulty)
+
+@app.route('/update_recipe/<recipe_id>', methods=["POST"])
+def update_recipe(recipe_id):
+    recipes = mongo.db.recipes
+    recipes.update({'_id': ObjectId(recipe_id)},
+    {
+        'title' : request.form.get('title'),
+        'category' : request.form.get('category'),
+        'gf_ingredient' : request.form.get('gf_ingredient'),
+        'prep_duration' : request.form.get('prep_duration'),
+        'difficulty' : request.form.get('difficulty'),
+        'method' : request.form.get('method'),
+        'ingredients' : request.form.get('ingredients'),
+        'description' : request.form.get('description'),
+        'tips' : request.form.get('tips')
+    })
+    return redirect(url_for('home'))
     
     
 # Test Page Route
