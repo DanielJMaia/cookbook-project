@@ -37,9 +37,10 @@ def insert_recipe():
     
 @app.route('/edit_recipe/<recipe_id>')
 def edit_recipe(recipe_id):
-    the_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
-    all_categories = mongo.db.categories.find()
-    return render_template('edit_recipe.html', recipe=the_recipe, categories=all_categories)
+    _recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    _categories = mongo.db.categories.find()
+    category_list = [category for category in _categories]
+    return render_template('edit_recipe.html', recipe=_recipe, categories=category_list)
     
     
 # Test Page Route
