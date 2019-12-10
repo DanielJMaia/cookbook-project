@@ -23,19 +23,17 @@
             </div>
         </nav>
 
+
+
         <ul class="sidenav" id="mobile-demo">
             <li><a href="{{url_for('home')}}">Home</a></li>
             <li><a href="{{url_for('add_recipe')}}">Add A Recipe</a></li>
-            <li><a href="{{url_for('get_recipe')}}">Breakfast</a></li>
-            <li><a href="{{url_for('get_recipe')}}">Easy Meals</a></li>
-            <li><a href="{{url_for('get_recipe')}}">Smoothies & Shakes</a></li>
-            <li><a href="{{url_for('get_recipe')}}">Fancy Dishes On A Budget</a></li>
-            <li><a href="{{url_for('get_recipe')}}">No Oven Needed</a></li>
-            <li><a href="{{url_for('get_recipe')}}">Deserts</a></li>
+            {% for cat in categories %}
+            <li><a href="{{url_for('get_recipes', recipe_category=cat.category)}}">{{ cat.category }}</a></li>
+            {% endfor %}
             <li><a href="{{url_for('test')}}">Test Page</a></li>
         </ul>
 
- 
 
     </header>
     <main>

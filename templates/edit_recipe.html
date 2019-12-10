@@ -20,7 +20,11 @@
                 <div class="input-field col s11">
                     <select name="category">
                         {% for cat in categories %}
+                            {% if cat.category == recipe.category %}
+                                <option value="{{ cat.category }}" selected>{{ cat.category }}</option>
+                            {% else %}
                                 <option value="{{ cat.category }}">{{ cat.category }}</option>
+                            {% endif %}
                         {% endfor %}
                     </select>
                     <label>Choose A Category!</label>
@@ -66,7 +70,7 @@
             </div>
             <div class="row">
                 <div class="input-field col s11">
-                    <textarea id="textarea1" class="materialize-textarea"></textarea>
+                    <textarea id="textarea1" class="materialize-textarea" name="method"></textarea>
                     <label for="textarea1">Method</label>
                 </div>
             </div>
@@ -87,15 +91,17 @@
                 </div>
             </div>
             <div class="row">
-                <button class="btn waves-effect waves-light" type="submit" name="action">Edit
+                <div class="col s2 center-align">
+                    <button class="btn waves-effect waves-light button_form_min_width" type="submit" name="action">Edit
                     <i class="material-icons right">send</i>
                 </button>
+                </div>
             </div>
         </form>
         <div class="col s12 m4 submit_image_spacing">
             <div class="card">
                 <div class="card-image">
-                    <img src="static/img/upload.jpg" class="image" id="upload_image">
+                    <img src="/static/img/upload.jpg" class="image" id="upload_image">
                 </div>
                 <div class="card-content">
                     <span class="card-title"><a class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>Choose files to Upload</a></span>

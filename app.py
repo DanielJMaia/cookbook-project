@@ -18,10 +18,11 @@ def home():
     return render_template("index.html",
     categories=mongo.db.categories.find())
     
-@app.route('/get_recipes')
-def get_recipe():
+@app.route('/get_recipes/<recipe_category>')
+def get_recipes(recipe_category):
     return render_template("recipes.html",
-    recipes=mongo.db.recipes.find({"category": "Breakfast"}))
+    categories=mongo.db.categories.find(),
+    recipes=mongo.db.recipes.find({"category": recipe_category}))
     
 @app.route('/add_recipe')
 def add_recipe():

@@ -1,23 +1,38 @@
-  body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-    font-family: 'Solway', 'Merriweather', serif;
-  }
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  font-family: 'Solway', 'Merriweather', serif;
+}
 
-  main {
-    flex: 1 0 auto;
-  }
+main {
+  flex: 1 0 auto;
+}
+
+#quote {
+  background-image: url("/static/img/quote_background.jpg");
+  background-size: cover;
+  padding-top: 300px;
+  text-align: center;
+  height: 850px;
+}
+
+#upload_image {
+  padding: 50px;
+}
+
+#submit_recipe_header {
+  padding-bottom: 50px;
+}
+
+.button_form_min_width{
+  min-width: 162px;
+}
+
+.submit_image_spacing{
+  padding-top: 50px!important;
+}
+
+.edit_button{
   
-  #quote {
-    background-image: url("/static/img/quote_background.jpg");
-    background-size: cover;
-    padding-top: 300px;
-    text-align: center;
-    height: 850px;
-  }
-  
-  .card-title {
-    color: #000 !important;
-  }
-  
+}
