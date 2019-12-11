@@ -9,7 +9,7 @@ USER = os.getenv('DB_USER')
 PASSWORD = os.environ.get('DB_PASSWORD')
 
 app.config["MONGO_DBNAME"] = 'milestone-project-cookbook'
-app.config["MONGO_URI"] = 'mongodb+srv://root:r00tUser@myfirstcluster-bgp7f.mongodb.net/milestone-project-cookbook?retryWrites=true&w=majority'
+app.config["MONGO_URI"] = 'mongodb+srv://username:password@myfirstcluster-bgp7f.mongodb.net/milestone-project-cookbook?retryWrites=true&w=majority'
 
 mongo = PyMongo(app)
 
