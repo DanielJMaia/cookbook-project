@@ -1,0 +1,27 @@
+{% extends 'base.html' %} {% block content %}
+<div class="container">
+    {% for recipe in recipes %}
+    <div class="row">
+        <div class="col s12">
+            <h5 class="left"> {{ recipe.title }}</h5>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12">
+            <p class="left">Recipe{{ recipe.difficulty }} {{ recipe.description }} {{ recipe.category }} {{ recipe.gf_ingridients}}</p> 
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s4 left">
+            <h6>Ingredients: <p>{{ recipe.ingredients }}</p></h6>
+            </div>
+        <div class="col s8 right">
+            <p class="center"><h6>Method: {{ recipe.method }}</h6><br>Prep dutation: {{ recipe.prep_duration }}<br>Tips and Tricks: {{ recipe.tips }}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12"></div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

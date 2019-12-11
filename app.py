@@ -1,22 +1,21 @@
 import os
+import env
 from flask import Flask, render_template, redirect, request, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 
 app = Flask(__name__)
 
-USER = os.getenv('DB_USER')
-PASSWORD = os.environ.get('DB_PASSWORD')
-
 app.config["MONGO_DBNAME"] = 'milestone-project-cookbook'
-app.config["MONGO_URI"] = 'mongodb+srv://username:password@myfirstcluster-bgp7f.mongodb.net/milestone-project-cookbook?retryWrites=true&w=majority'
+app.config['MONGO_URI'] = os.getenv('MONGO_URI', "Env value not loaded")
 
 mongo = PyMongo(app)
 
 @app.route('/')
 def home():
     return render_template("index.html",
-    categories=mongo.db.categories.find())
+    categories=mongo.db.categories.find(),
+    second_category=mongo.db.categories.find())
     
 @app.route('/get_recipes/<recipe_category>')
 def get_recipes(recipe_category):
@@ -28,6 +27,7 @@ def get_recipes(recipe_category):
 def add_recipe():
     return render_template("add_recipe.html",
     categories=mongo.db.categories.find(),
+    second_category=mongo.db.categories.find(),
     difficulty=mongo.db.difficulty.find())
     
 @app.route('/insert_recipe', methods=["POST"])
@@ -61,6 +61,10 @@ def update_recipe(recipe_id):
     })
     return redirect(url_for('home'))
     
+@app.route('/view_recipe/<recipe_id>')
+def view_recipe(recipe_id):
+    return render_template('view_recipe.html',
+    recipes = mongo.db.recipes.find({"_id": ObjectId(recipe_id)}))
     
 # Test Page Route
 
