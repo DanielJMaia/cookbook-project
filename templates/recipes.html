@@ -3,24 +3,26 @@
     <div class="row">
         {% for recipe in recipes %}
         <div class="col s6">
-            <div class="card">
-                <div class="card-image">
-                    <img src="/static/img/smoothie_category.jpg">
-                </div>
-                <div class="card-content">
-                    <h5>{{ recipe.title }}</h5>
-                </div>
-                <div class="card-content">
-                    <div class="row">
-                        <div class="col s10">
-                            <p>{{ recipe.description }}</p>
-                        </div>
-                        <div class="col s2">
-                            <a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn edit_button">Edit</a>
+            <a href="{{url_for('view_recipe', recipe_id=recipe._id)}}">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="/static/img/smoothie_category.jpg">
+                    </div>
+                    <div class="card-content black-text">
+                        <h5>{{ recipe.title }}</h5>
+                    </div>
+                    <div class="card-content">
+                        <div class="row">
+                            <div class="col s10 black-text">
+                                <p>{{ recipe.description }}</p>
+                            </div>
+                            <div class="col s2">
+                                <a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn edit_button">Edit</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </a>
         </div>
         {% endfor %}
     </div>
