@@ -1,26 +1,46 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %} {% block content %} {% for recipe in recipes %}
 <div class="container">
-    {% for recipe in recipes %}
     <div class="row">
         <div class="col s12">
             <h5 class="left"> {{ recipe.title }}</h5>
         </div>
-    </div>
-    <div class="row">
         <div class="col s12">
-            <p class="left">Recipe{{ recipe.difficulty }} {{ recipe.description }} {{ recipe.category }} {{ recipe.gf_ingridients}}</p> 
+            <h7 class="left">{{ recipe.description }}</h7>
+        </div>
+    </div>
+    <div class="row recipe_banner">
+        <div class="col s12">
+            <div class="card-panel white recipe_information_box right">
+                <p>Difficulty: {{ recipe.difficulty }}</p>
+                <div class="divider"></div>
+                <p>Prep dutation: {{ recipe.prep_duration }}</p>
+                <div class="divider"></div>
+                <p>Category: {{ recipe.category }}</p>
+
+            </div>
         </div>
     </div>
     <div class="row">
-        <div class="col s4 left">
-            <h6>Ingredients: <p>{{ recipe.ingredients }}</p></h6>
-            </div>
-        <div class="col s8 right">
-            <p class="center"><h6>Method: {{ recipe.method }}</h6><br>Prep dutation: {{ recipe.prep_duration }}<br>Tips and Tricks: {{ recipe.tips }}</p>
+        <div class="col s12 m5 left">
+            <h6>Ingredients:</h6>
+            <p>{{ recipe.ingredients }}</p>
+            <h6>GF Replacement Ingredients: </h6>
+            <p>{{ recipe.gf_ingridients}}</p>
+        </div>
+        <div class="col s12 m7 right">
+            <h6>Method: </h6>
+            <p>{{ recipe.method }}</p>
+            <h6>Tips and Tricks: </h6>
+            <p>{{ recipe.tips }}</p>
         </div>
     </div>
     <div class="row">
         <div class="col s12"></div>
+    </div>
+    <div class="row">
+        <div class="col s2">
+            <a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn edit_button">Edit</a>
+        </div>
     </div>
     {% endfor %}
 </div>
