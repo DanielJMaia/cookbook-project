@@ -19,6 +19,7 @@ main {
   padding-top: 17rem;
   text-align: center;
   height: 55rem;
+  text-shadow: 0.5px 0.5px #aaa6a6;
 }
 
 #upload_image {
