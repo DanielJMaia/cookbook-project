@@ -10,3 +10,7 @@ document.getElementById("back_icon").addEventListener("click", goBack)
 function goBack(){
     window.history.back();
 }
+
+$('[name="url"]').on('change', function() {
+     $('img.image').prop('src', this.value);
+});
