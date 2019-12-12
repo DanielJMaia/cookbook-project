@@ -64,7 +64,7 @@ def update_recipe(recipe_id):
 @app.route('/view_recipe/<recipe_id>')
 def view_recipe(recipe_id):
     return render_template('view_recipe.html',
-    recipes = mongo.db.recipes.find({"_id": ObjectId(recipe_id)}))
+    recipes = mongo.db.recipes.find({"_id": ObjectId(recipe_id)}), categories=mongo.db.categories.find())
     
 # Test Page Route
 

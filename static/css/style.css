@@ -9,12 +9,16 @@ main {
   flex: 1 0 auto;
 }
 
+.brand-logo{
+  width: fit-content;
+}
+
 #quote {
   background-image: url("/static/img/quote_background.jpg");
   background-size: cover;
-  padding-top: 300px;
+  padding-top: 17rem;
   text-align: center;
-  height: 850px;
+  height: 55rem;
 }
 
 #upload_image {
@@ -25,14 +29,44 @@ main {
   padding-bottom: 50px;
 }
 
-.button_form_min_width{
+.button_form_min_width {
   min-width: 162px;
 }
 
-.submit_image_spacing{
+.submit_image_spacing {
   padding-top: 50px!important;
 }
 
-.edit_button{
-  
+.recipe_banner {
+  background-image: url("https://i.imgur.com/PuHbs0g.jpg");
+  background-size: cover;
+  resize: both;
+  min-height: 40rem;
+}
+
+.recipe_information_box {
+  width: 100%;
+  margin-top: 5%;
+}
+
+.responsive_image{
+  object-fit: cover;
+  height: 20rem;
+}
+
+
+@media (min-width: 768px) {
+  .recipe_information_box {
+  width: 40%;
+  margin-top: 7%;
+  margin-right: 6%;
+}
+}
+
+@media (min-width: 1200px) {
+  .recipe_information_box {
+  width: 20%;
+  margin-top: 7%;
+  margin-right: 6%;
+}
 }
