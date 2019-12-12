@@ -31,9 +31,6 @@ main {
 
 .button_form_min_width {
   min-width: 162px;
-}
-
-#submit_button_add_recipe{
   float: left;
 }
 

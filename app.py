@@ -60,7 +60,7 @@ def update_recipe(recipe_id):
         'tips' : request.form.get('tips'),
         'url' : request.form.get('url')
     })
-    return redirect(url_for('home'))
+    return redirect(url_for('/view_recipe/<recipe_id>'))
     
 @app.route('/view_recipe/<recipe_id>')
 def view_recipe(recipe_id):
