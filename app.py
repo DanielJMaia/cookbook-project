@@ -42,7 +42,7 @@ def edit_recipe(recipe_id):
     _categories = mongo.db.categories.find()
     _difficulty = mongo.db.difficulty.find()
     category_list = [category for category in _categories]
-    return render_template('edit_recipe.html', recipe=_recipe, categories=category_list, difficulty=_difficulty)
+    return render_template('edit_recipe.html', recipe=_recipe, categories=category_list, difficulty=_difficulty, second_category=mongo.db.categories.find())
 
 @app.route('/update_recipe/<recipe_id>', methods=["POST"])
 def update_recipe(recipe_id):
@@ -57,7 +57,8 @@ def update_recipe(recipe_id):
         'method' : request.form.get('method'),
         'ingredients' : request.form.get('ingredients'),
         'description' : request.form.get('description'),
-        'tips' : request.form.get('tips')
+        'tips' : request.form.get('tips'),
+        'url' : request.form.get('url')
     })
     return redirect(url_for('home'))
     
