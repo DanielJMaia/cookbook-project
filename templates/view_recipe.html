@@ -9,14 +9,14 @@
         </div>
     </div>
     <div class="row recipe_banner">
-        <div class="col s12">
+        <div class="col s12 recipe_image_information_container">
+            <img id="recipe_image" src="{{recipe.url}}" />
             <div class="card-panel white recipe_information_box right">
                 <p>Difficulty: {{ recipe.difficulty }}</p>
                 <div class="divider"></div>
                 <p>Prep dutation: {{ recipe.prep_duration }}</p>
                 <div class="divider"></div>
                 <p>Category: {{ recipe.category }}</p>
-
             </div>
         </div>
     </div>

@@ -38,15 +38,23 @@ main {
 }
 
 .recipe_banner {
-  background-image: url("https://i.imgur.com/PuHbs0g.jpg");
+  /*background-image: url("https://i.imgur.com/PuHbs0g.jpg"); */
   background-size: cover;
   resize: both;
   min-height: 40rem;
 }
 
 .recipe_information_box {
+  width: 100%
+}
+.recipe_image_information_container {
+  position: relative;
+}
+
+#recipe_image{
+  height: auto;
   width: 100%;
-  margin-top: 5%;
+  position: relative;
 }
 
 .responsive_image{
@@ -57,16 +65,28 @@ main {
 
 @media (min-width: 768px) {
   .recipe_information_box {
-  width: 40%;
-  margin-top: 7%;
-  margin-right: 6%;
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  width: 40%; 
 }
 }
+
+@media (min-width: 1000px) {
+  .recipe_information_box {
+  width: 30%; 
+}
+}
+
 
 @media (min-width: 1200px) {
   .recipe_information_box {
   width: 20%;
-  margin-top: 7%;
-  margin-right: 6%;
+}
+}
+
+@media (min-width: 2560px) {
+  .recipe_information_box {
+  width: 40%; 
 }
 }
