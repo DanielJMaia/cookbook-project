@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% block content %}
 
 <h3 class="center-align" id="submit_recipe_header">Edit {{recipe.title}}</h3>
-<form action="{{url_for('insert_recipe')}}" method="POST" class="col s12 m8" autocomplete="off">
+<form action="{{url_for('update_recipe', recipe_id=recipe._id)}}" method="POST" class="col s12 m8" autocomplete="off">
     <div class="container">
         <div class="row">
             <div class="col s11 m4 submit_image_spacing">
@@ -57,8 +57,8 @@
                 <label for="duration">Duration</label>
             </div>
             <div class="input-field col s11 m8">
-                <textarea id="textarea1" class="materialize-textarea" name="method" value="{{recipe.method}}"required></textarea>
-                <label for="textarea1">Method</label>
+                <input id="method" type="text" class="validate" name="method" value="{{recipe.method}}" required></input>
+                <label for="method">Method</label>
             </div>
             <div class="input-field col s11 m8">
                 <input id="gf_ingredient" type="text" class="validate" name="gf_ingredient" value="{{recipe.gf_ingredient}}">
