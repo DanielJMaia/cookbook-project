@@ -3,6 +3,7 @@ body {
   min-height: 100vh;
   flex-direction: column;
   font-family: 'Solway', 'Merriweather', serif;
+  background-color: #faebd7;
 }
 
 main {
@@ -20,6 +21,15 @@ main {
   text-align: center;
   height: 55rem;
   text-shadow: 0.5px 0.5px #aaa6a6;
+}
+
+.quote_header {
+  background-color: white;
+  width: fit-content;
+  padding: 13px;
+  border-radius: 6px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 #upload_image {
@@ -55,6 +65,12 @@ main {
   position: relative;
 }
 
+.recipe_information {
+  background-color: white;
+  margin: -2rem;
+  padding: 2rem;
+}
+
 #recipe_image {
   height: auto;
   width: 100%;
@@ -75,7 +91,10 @@ main {
 }
 
 
-
+.separation {
+  min-height: 2rem;
+  background-color: #faebd7;
+}
 
 
 @media (min-width: 768px) {
@@ -84,6 +103,10 @@ main {
     right: 5%;
     top: 5%;
     width: 40%;
+  }
+  .quote_header {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 

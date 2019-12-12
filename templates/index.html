@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% block content %}
 
 <div class="col 12" id="quote">
-    <h3>Delicious Food With No Compromise</h3>
+    <h3 class="quote_header">Delicious Food With No Compromise</h3>
 </div>
 
 <div class="container">
@@ -11,9 +11,7 @@
         </div>
     </div>
     <div class="row">
-
         {% for category in second_category %}
-
         <div class="col s12 m6">
             <a class="black-text" href="{{url_for('get_recipes', recipe_category=category.category)}}">
                 <div class="card">
