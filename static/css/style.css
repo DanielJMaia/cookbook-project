@@ -33,8 +33,13 @@ main {
   min-width: 162px;
 }
 
+#submit_button_add_recipe{
+  float: left;
+}
+
 .submit_image_spacing {
   padding-top: 50px!important;
+  float: right!important;
 }
 
 .recipe_banner {
@@ -86,7 +91,9 @@ main {
 }
 
 @media (min-width: 2560px) {
-  .recipe_information_box {
-  width: 40%; 
+  
 }
+
+@media (min-width: 3840px) {
+  
 }

@@ -30,7 +30,6 @@
             {% for cat in categories %}
             <li><a href="{{url_for('get_recipes', recipe_category=cat.category)}}">{{ cat.category }}</a></li>
             {% endfor %}
-            <li><a href="{{url_for('test')}}">Test Page</a></li>
         </ul>
 
 

@@ -66,12 +66,6 @@ def view_recipe(recipe_id):
     return render_template('view_recipe.html',
     recipes = mongo.db.recipes.find({"_id": ObjectId(recipe_id)}), categories=mongo.db.categories.find())
     
-# Test Page Route
-
-@app.route('/testing')
-def test():
-    return render_template("testing.html",
-    recipes=mongo.db.recipes.find())
 
 if __name__  == '__main__':
     app.run(host=os.environ.get('IP'),
