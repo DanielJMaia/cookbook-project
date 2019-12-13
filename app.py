@@ -60,7 +60,8 @@ def update_recipe(recipe_id):
         'tips' : request.form.get('tips'),
         'url' : request.form.get('url')
     })
-    return redirect(url_for('home'))
+    return render_template('view_recipe.html',
+    recipes = mongo.db.recipes.find({"_id": ObjectId(recipe_id)}))
     
 @app.route('/view_recipe/<recipe_id>')
 def view_recipe(recipe_id):
