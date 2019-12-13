@@ -2,7 +2,7 @@ Smoothie Category Image: https://beamingbaker.com/triple-berry-smoothie-5-ingred
 Quote Background Image : https://www.pexels.com/photo/burger-and-vegetables-placed-on-brown-wood-surface-1565982/
 
 I got a LOT of my images from this website - https://www.pexels.com/
-
+library used: sweetalert: https://sweetalert.js.org/guides/
 
 Errors Encountered: Clashing between Materialize styles and my own. 
 Initializing materialize elements wasn't always working.

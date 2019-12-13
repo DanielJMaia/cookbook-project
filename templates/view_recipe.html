@@ -5,53 +5,52 @@
     </div>
 </div>
 <div class="container">
-    <div class="row">
-        <div class="col s12">
-            <h5 class="left"> {{ recipe.title }}</h5>
+    <div class="recipe_information">
+        <div class="row">
+            <div class="col s12">
+                <h5 class="left"> {{ recipe.title }}</h5>
+            </div>
+            <div class="col s12">
+                <h7 class="left">{{ recipe.description }}</h7>
+            </div>
         </div>
-        <div class="col s12">
-            <h7 class="left">{{ recipe.description }}</h7>
+        <div class="row recipe_banner">
+            <div class="col s12 recipe_image_information_container">
+                <img id="recipe_image" src="{{recipe.url}}" />
+                <div class="card-panel white recipe_information_box right">
+                    <p>Difficulty: {{ recipe.difficulty }}</p>
+                    <div class="divider"></div>
+                    <p>Prep dutation: {{ recipe.prep_duration }}</p>
+                    <div class="divider"></div>
+                    <p>Category: {{ recipe.category }}</p>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="row recipe_banner">
-        <div class="col s12 recipe_image_information_container">
-            <img id="recipe_image" src="{{recipe.url}}" />
-            <div class="card-panel white recipe_information_box right">
-                <p>Difficulty: {{ recipe.difficulty }}</p>
-                <div class="divider"></div>
-                <p>Prep dutation: {{ recipe.prep_duration }}</p>
-                <div class="divider"></div>
-                <p>Category: {{ recipe.category }}</p>
+        <div class="row" id="recipe_information_row">
+            <div class="col s12 m4">
+                <h6 class="underline">Ingredients:</h6>
+                <p>{{ recipe.ingredients }}</p>
+                <h6 class="underline">GF Replacement Ingredients: </h6>
+                <p>{{ recipe.gf_ingredient}}</p>
+            </div>
+            <div class="col s12 m8">
+                <h6 class="underline">Cooking Instructions: </h6>
+                <p>{{ recipe.method }}</p>
+                <h6 class="underline">Additional Tips: </h6>
+                <p>{{ recipe.tips }}</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s12"></div>
+        </div>
+        <div class="row">
+            <div class="col s2">
+                <a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn button_form_min_width">Edit</a>
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col s12 m5 left">
-            <h6>Ingredients:</h6>
-            <p>{{ recipe.ingredients }}</p>
-            <h6>GF Replacement Ingredients: </h6>
-            <p>{{ recipe.gf_ingredient}}</p>
-        </div>
-        <div class="col s12 m7 right">
-            <h6>Method: </h6>
-            <p>{{ recipe.method }}</p>
-            <h6>Tips and Tricks: </h6>
-            <p>{{ recipe.tips }}</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col s12"></div>
-    </div>
-    <div class="row">
-        <div class="col s2">
-            <a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn button_form_min_width">Edit</a>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col s2">
-           <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn button_form_min_width red darken-2">Delete</a> 
-        </div>
-    </div>
-    {% endfor %}
+
 </div>
-{% endblock %}
+<div class="separation"></div>
+{% endfor %} {% endblock %}

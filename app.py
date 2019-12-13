@@ -58,7 +58,7 @@ def update_recipe(recipe_id):
         'ingredients' : request.form.get('ingredients'),
         'description' : request.form.get('description'),
         'tips' : request.form.get('tips'),
-        'url' : request.form.get('url')
+        'url' : request.form.get('image_url')
     })
     return render_template('view_recipe.html',
     recipes = mongo.db.recipes.find({"_id": ObjectId(recipe_id)}))

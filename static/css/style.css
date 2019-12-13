@@ -32,12 +32,20 @@ main {
   margin-right: 15px;
 }
 
-#upload_image {
-  padding: 50px;
-}
 
 #submit_recipe_header {
-  padding-bottom: 50px;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 13px;
+  padding: 28px;
+}
+
+.recipe_modify_container {
+  background-color: white;
+  padding: 25px;
+  border-radius: 13px;
+  margin-bottom: 40px;
 }
 
 .button_form_min_width {
@@ -51,10 +59,8 @@ main {
 }
 
 .recipe_banner {
-  /*background-image: url("https://i.imgur.com/PuHbs0g.jpg"); */
   background-size: cover;
   resize: both;
-  min-height: 40rem;
 }
 
 .recipe_information_box {
@@ -96,6 +102,20 @@ main {
   background-color: #faebd7;
 }
 
+.edit_button {
+  float: right;
+}
+
+.card-content {
+  max-height: 95px;
+}
+
+/* Text Decoration Classes */
+
+.underline {
+  text-decoration: underline;
+}
+
 
 @media (min-width: 768px) {
   .recipe_information_box {
@@ -107,6 +127,9 @@ main {
   .quote_header {
     margin-left: auto;
     margin-right: auto;
+  }
+  #recipe_information_row {
+    padding: 0 25px 0 25px;
   }
 }
 
