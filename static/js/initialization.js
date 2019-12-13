@@ -6,11 +6,32 @@ $(document).ready(function() {
 });
 
 document.getElementById("back_icon").addEventListener("click", goBack)
+document.getElementById("delete_button").addEventListener("click", showAlert)
 
-function goBack(){
+function goBack() {
     window.history.back();
 }
 
 $('[name="url"]').on('change', function() {
-     $('img.image').prop('src', this.value);
+    $('img.image').prop('src', this.value);
 });
+
+function showAlert() {
+    swal({
+            title: "Are you sure?",
+            text: "This will permanently delete this recipe!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+        .then((willDelete) => {
+            if (willDelete) {
+                swal("The recipe has been deleted!", {
+                    icon: "success",
+                });
+            }
+            else {
+                swal("Action Cancelled");
+            }
+        });
+}
