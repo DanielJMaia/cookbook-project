@@ -1,4 +1,5 @@
 document.getElementById("back_icon").addEventListener("click", goBack)
+
 function goBack() {
     window.history.back();
 }
@@ -11,7 +12,16 @@ $('[name="url"]').on('change', function() {
     $('img.image').prop('src', this.value);
 });
 
-document.getElementById("delete_button").addEventListener("click", showAlert)
+document.getElementById("searchbar_input").addEventListener("keypress", function(e) {
+    var key = e.which || e.keyCode;
+    if (key === 13) {
+        console.log("this is working");
+        //document.getElementById("search_recipe_form").submit();
+    }});
+
+
+document.getElementById("delete_button").addEventListener("click", showAlert);
+
 function showAlert() {
     swal({
             title: "Are you sure?",
@@ -24,6 +34,7 @@ function showAlert() {
             if (willDelete) {
                 swal("The recipe has been deleted", {
                     icon: "success",
+                    buttons: false
                 });
                 setTimeout(function() {
                     document.getElementById("delete_form_trigger").submit();
