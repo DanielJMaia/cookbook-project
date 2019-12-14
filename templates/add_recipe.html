@@ -32,7 +32,7 @@
                 <select name="category" required>
                         <option selected disabled value>Select category</option>
                     {% for cat in local_category %}
-                        <option value="{{ cat.category }}" >{{ cat.title }}</option>
+                        <option value="{{ cat.title }}" >{{ cat.title }}</option>
                     {% endfor %}
                 </select>
                 <label>Choose A Category!</label>
@@ -48,7 +48,7 @@
             </div>
             <div class="input-field col s11 m7">
                 <textarea id="ingredients" type="text" class="materialize-textarea" name="ingredients" required></textarea>
-                <label for="ingredients">Ingredients</label>
+                <label for="ingredients">Ingredients - Each Ingredient On A New Line</label>
             </div>
             <div class="input-field col s11 m7">
                 <input id="duration" type="text" class="validate" name="prep_duration" required/>
@@ -56,7 +56,7 @@
             </div>
             <div class="input-field col s11 m7">
                 <textarea id="textarea1" class="materialize-textarea" name="method" required></textarea>
-                <label for="textarea1">Method</label>
+                <label for="textarea1">Method - Each Step On A New Line</label>
             </div>
             <div class="input-field col s11 m7">
                 <input id="gf_ingredient" type="text" class="validate" name="gf_ingredient"/>

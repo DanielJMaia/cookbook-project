@@ -23,6 +23,12 @@ def get_recipes(recipe_category):
     global_category=mongo.db.categories.find(),
     recipes=mongo.db.recipes.find({"category": recipe_category}))
     
+@app.route('/search_recipes/')
+def search_recipes():
+    return render_template("search_recipes.html",
+    global_category=mongo.db.categories.find(),
+    recipes=mongo.db.recipes.find({"title" : "Banana and Blueberry Smoothie" }))
+    
 @app.route('/add_recipe')
 def add_recipe():
     return render_template("add_recipe.html",
@@ -33,7 +39,23 @@ def add_recipe():
 @app.route('/insert_recipe', methods=["POST"])
 def insert_recipe():
     recipes = mongo.db.recipes
-    recipes.insert_one(request.form.to_dict())
+    method_string = request.form.get('method')
+    method_array = [m for m in method_string.split("\n") if m]
+    ingredients_string = request.form.get('ingredients')
+    ingredients_array = [i for i in ingredients_string.split("\n") if i]
+    data = {
+        'title' : request.form.get('title'),
+        'category' : request.form.get('category'),
+        'gf_ingredient' : request.form.get('gf_ingredient'),
+        'prep_duration' : request.form.get('prep_duration'),
+        'difficulty' : request.form.get('difficulty'),
+        'method' : method_array,
+        'ingredients' : ingredients_array,
+        'description' : request.form.get('description'),
+        'tips' : request.form.get('tips'),
+        'url' : request.form.get('url')
+    }
+    recipes.insert_one(data)
     return redirect(url_for('home'))
     
 @app.route('/edit_recipe/<recipe_id>')
