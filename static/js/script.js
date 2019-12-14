@@ -1,20 +1,17 @@
-$(document).on("keydown", ":input:not(textarea)", function(event) {
-    return event.key != "Enter";
-});
-
 document.getElementById("back_icon").addEventListener("click", goBack)
-
-
-$('[name="image_url"]').on('change', function() {
-    $('img.image').prop('src', this.value);
-});
-
 function goBack() {
     window.history.back();
 }
 
-document.getElementById("delete_button").addEventListener("click", showAlert)
+$(document).on("keydown", ":input:not(textarea)", function(event) {
+    return event.key != "Enter";
+});
 
+$('[name="url"]').on('change', function() {
+    $('img.image').prop('src', this.value);
+});
+
+document.getElementById("delete_button").addEventListener("click", showAlert)
 function showAlert() {
     swal({
             title: "Are you sure?",
@@ -30,7 +27,7 @@ function showAlert() {
                 });
                 setTimeout(function() {
                     document.getElementById("delete_form_trigger").submit();
-                }, 3000);
+                }, 2000);
             }
             else {
                 swal("The recipe is safe!");

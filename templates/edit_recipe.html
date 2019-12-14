@@ -5,44 +5,44 @@
     </div>
 </div>
 <div class="container">
-<h3 class="center-align" id="submit_recipe_header">Edit {{recipe.title}}</h3>
+    <h3 class="center-align" id="submit_recipe_header">Edit {{recipe.title}}</h3>
 </div>
 <div class="container recipe_modify_container">
     <form action="{{url_for('update_recipe', recipe_id=recipe._id)}}" method="POST" class="col s12 m8" autocomplete="off">
 
         <div class="row">
-            <div class="col s11 m4 submit_image_spacing">
+            <div class="col s11 m5 submit_image_spacing">
                 <div class="card">
                     <div class="card-image">
                         <img src="{{recipe.url}}" class="image" alt="Image not found">
                     </div>
                     <div class="card-content">
-                        <input id="add_image" type="text" class="validate" name="image_url" value="{{recipe.url}}" placeholder="Image URL i.e. https://i.imgur.com/PuHbs0g.jpg" required>
+                        <input id="add_image" type="text" class="validate" name="url" value="{{recipe.url}}" placeholder="Image URL i.e. https://i.imgur.com/PuHbs0g.jpg" required>
                     </div>
                 </div>
             </div>
-            <div class="input-field col s11 m8">
-                <input id="recipe_title" type="text" class="validate" name="title" value="{{recipe.title}}" required>
+            <div class="input-field col s11 m7">
+                <input id="recipe_title" type="text" class="validate" name="title" value="{{recipe.title}}" required/>
                 <label for="recipe_title">Recipe Title</label>
             </div>
-            <div class="input-field col s11 m8">
-                <input id="recipe_description" type="text" class="validate" name="description" value="{{recipe.description}}" required>
+            <div class="input-field col s11 m7">
+                <input id="recipe_description" type="text" class="validate" name="description" value="{{recipe.description}}" required/>
                 <label for="recipe_description">Description</label>
             </div>
-            <div class="input-field col s11 m8">
+            <div class="input-field col s11 m7">
                 <select name="category" required>
                         <option selected disabled value>Select category</option>
-                    {% for cat in second_category %}
-                        {% if cat.category == recipe.category %}
-                            <option value="{{ cat.category }}" selected>{{ cat.category }}</option>
+                    {% for cat in local_category %}
+                        {% if cat.title == recipe.category %}
+                            <option value="{{ cat.title }}" selected>{{ cat.title }}</option>
                         {% else %}
-                            <option value="{{ cat.category }}">{{ cat.category }}</option>
+                            <option value="{{ cat.title }}">{{ cat.title }}</option>
                         {% endif %}
                     {% endfor %}
                 </select>
                 <label>Choose A Category!</label>
             </div>
-            <div class="input-field col s11 m8">
+            <div class="input-field col s11 m7">
                 <select name="difficulty" required>
                         <option selected disabled value>Select difficulty</option>
                     {% for diff in difficulty %}
@@ -55,24 +55,24 @@
                 </select>
                 <label>Ease of Preparation</label>
             </div>
-            <div class="input-field col s11 m8">
-                <input id="ingredients" type="text" class="validate" name="ingredients" value="{{recipe.ingredients}}" required>
+            <div class="input-field col s11 m7">
+                <textarea id="ingredients" type="text" class="materialize-textarea" name="ingredients" value="{{recipe.ingredients}}" required></textarea>
                 <label for="ingredients">Ingredients</label>
             </div>
-            <div class="input-field col s11 m8">
-                <input id="duration" type="text" class="validate" name="prep_duration" value="{{recipe.prep_duration}}" required>
+            <div class="input-field col s11 m7">
+                <input id="duration" type="text" class="validate" name="prep_duration" value="{{recipe.prep_duration}}" required/>
                 <label for="duration">Duration</label>
             </div>
-            <div class="input-field col s11 m8">
-                <input id="method" type="text" class="validate" name="method" value="{{recipe.method}}" required></input>
+            <div class="input-field col s11 m7">
+                <textarea id="method" class="materialize-textarea" name="method" value="{% for step in recipe.method%}{{recipe.method}}{% endfor %}" required></textarea>
                 <label for="method">Method</label>
             </div>
-            <div class="input-field col s11 m8">
-                <input id="gf_ingredient" type="text" class="validate" name="gf_ingredient" value="{{recipe.gf_ingredient}}">
+            <div class="input-field col s11 m7">
+                <input id="gf_ingredient" type="text" class="validate" name="gf_ingredient" value="{{recipe.gf_ingredient}}" />
                 <label for="gf_ingredient">Gluten Free Replacement Ingredients</label>
             </div>
-            <div class="input-field col s11 m8">
-                <input id="tips" type="text" class="validate" name="tips" value="{{recipe.tips}}">
+            <div class="input-field col s11 m7">
+                <input id="tips" type="text" class="validate" name="tips" value="{{recipe.tips}}" />
                 <label for="tips">Extra Tips</label>
             </div>
             <div class="col s12 center-align">
@@ -81,13 +81,12 @@
                 </button>
             </div>
         </div>
-    
-    <div class="row">
-        <div class="col s2">
-            <a class="waves-effect waves-light btn button_form_min_width red darken-2" id="delete_button">Delete</a>
-           <!-- <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn button_form_min_width red darken-2" id="delete_button">Delete</a> -->
+        <div class="row">
+            <div class="col s2">
+                <a class="waves-effect waves-light btn button_form_min_width red darken-2" id="delete_button">Delete</a>
+                <!-- <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn button_form_min_width red darken-2" id="delete_button">Delete</a> -->
+            </div>
         </div>
-    </div>
     </form>
     <form action="{{url_for('delete_recipe', recipe_id=recipe._id)}}" id="delete_form_trigger">
     </form>

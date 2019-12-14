@@ -11,16 +11,16 @@
         </div>
     </div>
     <div class="row">
-        {% for category in second_category %}
-        <div class="col s12 m6">
-            <a class="black-text" href="{{url_for('get_recipes', recipe_category=category.category)}}">
+        {% for category in local_category %}
+        <div class="col s12 m4">
+            <a class="black-text" href="{{url_for('get_recipes', recipe_category=category.title)}}">
                 <div class="card">
                     <div class="card-image">
                         <img class="responsive_image" src="{{ category.url }}" alt="Image Representing Category">
                         <span class="card-title black-text"></span>
                     </div>
                     <div class="card-content">
-                        <h5>{{ category.category }}</h5>
+                        <h5>{{ category.title }}</h5>
                     </div>
                 </div>
             </a>

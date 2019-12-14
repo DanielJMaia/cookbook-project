@@ -10,34 +10,34 @@
 <form action="{{url_for('insert_recipe')}}" method="POST" class="col s12 m8" autocomplete="off">
     <div class="container recipe_modify_container">
         <div class="row">
-            <div class="col s11 m4 submit_image_spacing">
+            <div class="col s11 m5 submit_image_spacing">
                 <div class="card">
                     <div class="card-image">
                         <img src="/static/img/shrunk_upload.png" class="image">
                     </div>
                     <div class="card-content">
-                        <input id="add_image" type="text" class="validate" name="image_url" placeholder="Image URL i.e. https://i.imgur.com/PuHbs0g.jpg" required>
+                        <input id="add_image" type="text" class="validate" name="url" placeholder="Image URL i.e. https://i.imgur.com/PuHbs0g.jpg" required/>
                     </div>
                 </div>
             </div>
-            <div class="input-field col s11 m8">
-                <input id="recipe_title" type="text" class="validate" name="title" required>
+            <div class="input-field col s11 m7">
+                <input id="recipe_title" type="text" class="validate" name="title" required/>
                 <label for="recipe_title">Recipe Title</label>
             </div>
-            <div class="input-field col s11 m8">
-                <input id="recipe_description" type="text" class="validate" name="description" required>
+            <div class="input-field col s11 m7">
+                <input id="recipe_description" type="text" class="validate" name="description" required/>
                 <label for="recipe_description">Description</label>
             </div>
-            <div class="input-field col s11 m8">
+            <div class="input-field col s11 m7">
                 <select name="category" required>
                         <option selected disabled value>Select category</option>
-                    {% for cat in second_category %}
-                        <option value="{{ cat.category }}" >{{ cat.category }}</option>
+                    {% for cat in local_category %}
+                        <option value="{{ cat.category }}" >{{ cat.title }}</option>
                     {% endfor %}
                 </select>
                 <label>Choose A Category!</label>
             </div>
-            <div class="input-field col s11 m8">
+            <div class="input-field col s11 m7">
                 <select name="difficulty" required>
                         <option selected disabled value>Select difficulty</option>
                     {% for diff in difficulty %}
@@ -46,24 +46,24 @@
                 </select>
                 <label>Ease of Preparation</label>
             </div>
-            <div class="input-field col s11 m8">
-                <input id="ingredients" type="text" class="validate" name="ingredients" required>
+            <div class="input-field col s11 m7">
+                <textarea id="ingredients" type="text" class="materialize-textarea" name="ingredients" required></textarea>
                 <label for="ingredients">Ingredients</label>
             </div>
-            <div class="input-field col s11 m8">
-                <input id="duration" type="text" class="validate" name="prep_duration" required>
+            <div class="input-field col s11 m7">
+                <input id="duration" type="text" class="validate" name="prep_duration" required/>
                 <label for="duration">Duration</label>
             </div>
-            <div class="input-field col s11 m8">
+            <div class="input-field col s11 m7">
                 <textarea id="textarea1" class="materialize-textarea" name="method" required></textarea>
                 <label for="textarea1">Method</label>
             </div>
-            <div class="input-field col s11 m8">
-                <input id="gf_ingredient" type="text" class="validate" name="gf_ingredient">
+            <div class="input-field col s11 m7">
+                <input id="gf_ingredient" type="text" class="validate" name="gf_ingredient"/>
                 <label for="gf_ingredient">Gluten Free Replacement Ingredients</label>
             </div>
-            <div class="input-field col s11 m8">
-                <input id="tips" type="text" class="validate" name="tips">
+            <div class="input-field col s11 m7">
+                <input id="tips" type="text" class="validate" name="tips"/>
                 <label for="tips">Extra Tips</label>
             </div>
             <div class="col s12 center-align">
