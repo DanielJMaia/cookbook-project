@@ -29,18 +29,21 @@
         <div class="row" id="recipe_information_row">
             <div class="col s12 m4">
                 <h6 class="underline">Ingredients:</h6>
-                <p>{{ recipe.ingredients }}</p>
+                {% for ingredient in recipe.ingredients %}
+                <p>{{ ingredient }}</p>
+                {% endfor %}
                 <h6 class="underline">GF Replacement Ingredients: </h6>
                 <p>{{ recipe.gf_ingredient}}</p>
             </div>
             <div class="col s12 m8">
                 <h6 class="underline">Cooking Instructions: </h6>
-                <p>{{ recipe.method }}</p>
+                {% for step in recipe.method %}
+                    <p>{{ step }}</p>
+                {% endfor %}
                 <h6 class="underline">Additional Tips: </h6>
                 <p>{{ recipe.tips }}</p>
             </div>
         </div>
-
         <div class="row">
             <div class="col s12"></div>
         </div>
@@ -50,7 +53,6 @@
             </div>
         </div>
     </div>
-
 </div>
 <div class="separation"></div>
 {% endfor %} {% endblock %}
