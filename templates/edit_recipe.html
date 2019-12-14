@@ -56,7 +56,11 @@
                 <label>Ease of Preparation</label>
             </div>
             <div class="input-field col s11 m7">
-                <textarea id="ingredients" type="text" class="materialize-textarea" name="ingredients" value="{{recipe.ingredients}}" required></textarea>
+                <textarea id="ingredients" class="materialize-textarea" name="ingredients" required>
+                    {%- for ingredient in recipe.ingredients -%}
+                    {{ ingredient }}
+                    {%- endfor -%}
+                </textarea>
                 <label for="ingredients">Ingredients</label>
             </div>
             <div class="input-field col s11 m7">
@@ -64,7 +68,11 @@
                 <label for="duration">Duration</label>
             </div>
             <div class="input-field col s11 m7">
-                <textarea id="method" class="materialize-textarea" name="method" value="{% for step in recipe.method%}{{recipe.method}}{% endfor %}" required></textarea>
+                <textarea id="method" class="materialize-textarea" name="method" required>
+                    {%- for step in recipe.method -%}
+                    {{ step }}
+                    {%- endfor -%}
+                </textarea>
                 <label for="method">Method</label>
             </div>
             <div class="input-field col s11 m7">

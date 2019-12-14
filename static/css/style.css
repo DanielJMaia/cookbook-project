@@ -10,6 +10,20 @@ main {
   flex: 1 0 auto;
 }
 
+.search_bar_container{
+  position: relative;
+  padding: 0 15px 0 0;
+  margin: 0;
+  background-color: #fff;
+}
+
+.search_icon{
+  position: absolute;
+  bottom: 0px;
+  right: 16px;
+}
+
+
 .brand-logo {
   width: fit-content;
 }
@@ -114,6 +128,10 @@ main {
 
 .underline {
   text-decoration: underline;
+}
+
+.no_bottom_margin{
+  margin-bottom: 0px;
 }
 
 
