@@ -55,8 +55,11 @@ def insert_recipe():
         'tips' : request.form.get('tips'),
         'url' : request.form.get('url')
     }
-    recipes.insert_one(data)
-    return redirect(url_for('home'))
+    _id = recipes.insert_one(data)
+    return render_template('view_recipe.html',
+    global_category=mongo.db.categories.find(),
+    recipes = mongo.db.recipes.find({"_id": _id.inserted_id})
+    )
     
 @app.route('/edit_recipe/<recipe_id>')
 def edit_recipe(recipe_id):
