@@ -25,9 +25,9 @@ def get_recipes(recipe_category):
     
 @app.route('/search_recipes/')
 def search_recipes():
-    return render_template("search_recipes.html",
+    return render_template("search_recipe.html",
     global_category=mongo.db.categories.find(),
-    recipes=mongo.db.recipes.find({"title" : "Banana and Blueberry Smoothie" }))
+    recipes=mongo.db.recipes.find({"title" : {"$regex": "banana", "$options": "i"}}))
     
 @app.route('/add_recipe')
 def add_recipe():
