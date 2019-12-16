@@ -14,6 +14,7 @@ document.getElementById("searchbar_input").addEventListener('keypress', function
 });
 
 document.getElementById("search_icon_click").addEventListener('click', showMessage);
+
 function showMessage() {
     document.getElementById("search_recipe_form").submit();
 }
