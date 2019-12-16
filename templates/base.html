@@ -39,8 +39,14 @@
         </div>
     </header>
     <main>
-        <form action="{{url_for('search_recipes')}}" id="search_recipe_form">
-    </form>
+        <div id="form_container">
+            <form method="POST">
+                <input type="text" />
+                <button type="submit">submit</button>
+            </form>
+            <!--<form action="{{url_for('search_recipes')}}" id="search_recipe_form"></form>-->
+        </div>
+        
         {% block content %} {% endblock %}
     </main>
 

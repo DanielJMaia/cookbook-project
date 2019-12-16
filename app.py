@@ -23,11 +23,12 @@ def get_recipes(recipe_category):
     global_category=mongo.db.categories.find(),
     recipes=mongo.db.recipes.find({"category": recipe_category}))
     
-@app.route('/search_recipes/')
+@app.route('/search_recipes/', methods=["GET", "POST"])
 def search_recipes():
-    return render_template("search_recipe.html",
-    global_category=mongo.db.categories.find(),
-    recipes=mongo.db.recipes.find({"title" : {"$regex": "banana", "$options": "i"}}))
+    if request.method == "POST":
+        post_request = request.get()
+        print(post_request)
+    return render_template("search_recipe.html", global_category=mongo.db.categories.find(), recipes=mongo.db.recipes.find({"title" : {"$regex": "banana", "$options": "i"}}))
     
 @app.route('/add_recipe')
 def add_recipe():
