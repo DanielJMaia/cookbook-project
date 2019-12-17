@@ -12,8 +12,4 @@ The categories dropdown on the add recipe page also breaks when the for loop get
 How to do environment variables?
 Can't use jinja in JS, so I had to improvise for the delete button which uses sweetalert
 
-
-14/12 Meeting Prep
-
-I need to figure out how to display each item in an array, on a new line (method). This also relates to the edit_recipe page, since it tries to autocomplete the method textarea but it's an array so {{recipe.method}} doesn't cut it. 
-How do I do the same that I did for the update table section, but for the create table one. 
+Tutor Support: Xavier, Antonija, Tim, Kevin
