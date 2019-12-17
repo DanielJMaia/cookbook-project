@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>GF Recipes!</title>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Merriweather|Solway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css" />
     <link rel="shortcut icon" type="image/png" href="/static/img/transparent_favicon.png"/>
 </head>
-
 <body>
     <header>
         <div class="row no_bottom_margin">
@@ -47,7 +44,6 @@
     <main>
         {% block content %} {% endblock %}
     </main>
-
     <footer class="page-footer white lighten-4">
         <div class="container">
             <div class="row">
@@ -58,20 +54,17 @@
                 <div class="col l4 offset-l2 s12">
                     <h5 class="black-text">Social Media</h5>
                     <ul>
-                        <li class="footer_icon_style"><a href="https://github.com/DanielJMaia/cookbook-project"><img class="footer_icons" src="/static/img/github_icon.png" alt="GitHub Logo"></a></li>
-                        <li class="footer_icon_style"><a href="https://www.linkedin.com/in/daniel-johnson-maia-0479b2174/"><img class="footer_icons" src="/static/img/linedin_icon.png" alt="linedin logo"></a></li>
+                        <li class="footer_icon_style"><a href="https://github.com/DanielJMaia/cookbook-project" target="_blank"><img class="footer_icons" src="/static/img/github_icon.png" alt="GitHub Logo"></a></li>
+                        <li class="footer_icon_style"><a href="https://www.linkedin.com/in/daniel-johnson-maia-0479b2174/" target="_blank"><img class="footer_icons" src="/static/img/linedin_icon.png" alt="linedin logo"></a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </footer>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script type="text/javascript" src="/static/js/initialization.js"></script>
     <script type="text/javascript" src="/static/js/script.js"></script>
-
 </body>
-
 </html>
