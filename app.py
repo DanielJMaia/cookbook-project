@@ -1,5 +1,7 @@
 import os
-import env
+from os import path
+if path.exists("env.py"):
+   import env
 from flask import Flask, render_template, redirect, request, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
@@ -31,7 +33,8 @@ def search_recipes():
         print(post_request)
     return render_template("search_recipe.html",
                             global_category=mongo.db.categories.find(), 
-                            recipes=mongo.db.recipes.find({"title" : {"$regex": post_request, "$options": "i"}}))
+                            recipes=mongo.db.recipes.find({"title" : {"$regex": post_request, "$options": "i"}}),
+                            recipe_count=mongo.db.recipes.find({"title" : {"$regex": post_request, "$options": "i"}}).count())
     
 @app.route('/add_recipe')
 def add_recipe():
