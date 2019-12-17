@@ -149,6 +149,10 @@ main {
   padding-left: 5px;
 }
 
+ #no_recipe{
+     padding: 0 30px 0 30px;
+ }
+
 /* Text Decoration Classes */
 
 .underline {
