@@ -6,6 +6,11 @@ $('[name="url"]').on('change', function() {
     $('img.image').prop('src', this.value);
 });
 
+
+document.getElementById("search_icon_click").addEventListener('click', searchRecipes);
+function searchRecipes() {
+    document.getElementById("search_button").click();
+}
 /*
 document.getElementById("searchbar_input").addEventListener('keypress', function(e) {
     var key = e.which || e.keyCode;
@@ -14,9 +19,6 @@ document.getElementById("searchbar_input").addEventListener('keypress', function
     }
 });
 
-document.getElementById("search_icon_click").addEventListener('click', showMessage);
 
-function showMessage() {
-    document.getElementById("search_recipe_form").submit();
-}
 */
+

@@ -10,21 +10,28 @@ main {
   flex: 1 0 auto;
 }
 
-.search_bar_container{
-  position: relative;
+.search_bar_container {
   padding: 0 15px 0 0;
   margin: 0;
   background-color: #fff;
 }
 
-.search_icon{
+.search_icon {
   position: absolute;
-  bottom: 0px;
-  right: 16px;
+  bottom: -52px;
+  right: 26px;
 }
 
-#search_icon_click{
+#search_icon_click {
   cursor: pointer;
+}
+
+#search_button {
+  display: none;
+}
+
+#category_title {
+  margin-top: -70px;
 }
 
 
@@ -122,10 +129,12 @@ main {
 
 .edit_button {
   float: right;
+  margin-top: 25px;
 }
 
 .card-content {
-  max-height: 95px;
+  min-height: 110px;
+  padding: 24px 24px 1px 24px!important;
 }
 
 /* Text Decoration Classes */
@@ -134,12 +143,12 @@ main {
   text-decoration: underline;
 }
 
-.no_bottom_margin{
+.no_bottom_margin {
   margin-bottom: 0px;
 }
 
 
-@media (min-width: 768px) {
+@media (min-width: 600px) {
   .recipe_information_box {
     position: absolute;
     right: 5%;
@@ -150,8 +159,19 @@ main {
     margin-left: auto;
     margin-right: auto;
   }
+  .search_bar_container {
+    padding: 0 15px 0 0;
+    margin: 0;
+    background-color: transparent;
+  }
+
   #recipe_information_row {
     padding: 0 25px 0 25px;
+  }
+  .search_icon {
+    position: absolute;
+    bottom: 0px;
+    right: 16px;
   }
 }
 

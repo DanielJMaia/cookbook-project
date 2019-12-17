@@ -1,13 +1,16 @@
 {% extends 'base.html' %} {% block content %}
 <div class="row">
-    <div class="col s12">
+   
         <i class="material-icons" id="back_icon">arrow_back</i>
+   
+    <div class="col s12 center" id="category_title">
+        <h4>{{ current_category }}</h4>
     </div>
 </div>
 <div class="container">
     <div class="row">
         {% for recipe in recipes %}
-        <div class="col s12 m4">
+        <div class="col s12 m6 l4">
             <a href="{{url_for('view_recipe', recipe_id=recipe._id)}}">
                 <div class="card">
                     <div class="card-image">

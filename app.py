@@ -21,6 +21,7 @@ def home():
 def get_recipes(recipe_category):
     return render_template("recipes.html",
                             global_category=mongo.db.categories.find(),
+                            current_category=recipe_category,
                             recipes=mongo.db.recipes.find({"category": recipe_category}))
     
 @app.route('/search_recipes/', methods=["GET", "POST"])
