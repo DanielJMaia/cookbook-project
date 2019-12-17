@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Merriweather|Solway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css" />
+    <link rel="shortcut icon" type="image/png" href="/static/img/transparent_favicon.png"/>
 </head>
 
 <body>
@@ -25,7 +26,7 @@
                         <div class="col s12 m4 xl2 right search_bar_container" id="search_function">
                             <form action="{{url_for('search_recipes')}}" method="POST">
                                 <div class="col s12">
-                                    <input id="searchbar_input" name="searchbar_input" type="text" placeholder="Search">
+                                    <input id="searchbar_input" name="searchbar_input" type="text" placeholder="Search" class="col s10">
                                     <i class="material-icons black-text search_icon" id="search_icon_click">search</i>
                                 </div>
                                 <input type="submit" value="placeholder" id="search_button">
@@ -57,7 +58,8 @@
                 <div class="col l4 offset-l2 s12">
                     <h5 class="black-text">Social Media</h5>
                     <ul>
-                        <li><a class="black-text text-lighten-3" href="#!">Link 1</a></li>
+                        <li class="footer_icon_style"><a href="https://github.com/DanielJMaia/cookbook-project"><img class="footer_icons" src="/static/img/github_icon.png" alt="GitHub Logo"></a></li>
+                        <li class="footer_icon_style"><a href="https://www.linkedin.com/in/daniel-johnson-maia-0479b2174/"><img class="footer_icons" src="/static/img/linedin_icon.png" alt="linedin logo"></a></li>
                     </ul>
                 </div>
             </div>

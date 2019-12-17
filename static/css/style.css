@@ -24,6 +24,9 @@ main {
 
 #search_icon_click {
   cursor: pointer;
+  padding-right: 7%;
+  padding-left: 8%;
+  right: 0px;
 }
 
 #search_button {
@@ -52,7 +55,7 @@ main {
   background-color: white;
   width: fit-content;
   padding: 13px;
-  border-radius: 6px;
+  border-radius: 4px;
   margin-left: 15px;
   margin-right: 15px;
 }
@@ -137,6 +140,15 @@ main {
   padding: 24px 24px 1px 24px!important;
 }
 
+.footer_icons {
+  max-width: 25px;
+}
+
+.footer_icon_style{
+  display: inline;
+  padding-left: 5px;
+}
+
 /* Text Decoration Classes */
 
 .underline {
@@ -165,6 +177,10 @@ main {
     background-color: transparent;
   }
 
+  #searchbar_input {
+    float: none;
+  }
+
   #recipe_information_row {
     padding: 0 25px 0 25px;
   }
@@ -173,11 +189,23 @@ main {
     bottom: 0px;
     right: 16px;
   }
+  #search_icon_click {
+    cursor: pointer;
+    padding-right: 2%;
+    padding-left: 3%;
+    right: 0px;
+  }
 }
 
 @media (min-width: 1000px) {
   .recipe_information_box {
     width: 30%;
+  }
+  #search_icon_click {
+    cursor: pointer;
+    padding-right: 2%;
+    padding-left: 2%;
+    right: 0px;
   }
 }
 
@@ -186,8 +214,32 @@ main {
   .recipe_information_box {
     width: 20%;
   }
+  #search_icon_click {
+    cursor: pointer;
+    padding-right: 1%;
+    padding-left: 2%;
+    right: 0px;
+  }
 }
 
-@media (min-width: 2560px) {}
+@media (min-width: 1920px) {
+  #search_icon_click {
+    cursor: pointer;
+    padding-right: 1%;
+    padding-left: 2%;
+    right: 0px;
+  }
+}
+
+
+
+@media (min-width: 2560px) {
+  #search_icon_click {
+    cursor: pointer;
+    padding-right: 1.25%;
+    padding-left: 2%;
+    right: 0px;
+  }
+}
 
 @media (min-width: 3840px) {}

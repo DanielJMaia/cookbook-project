@@ -32,13 +32,15 @@
                 {% for ingredient in recipe.ingredients %}
                 <p>{{ ingredient }}</p>
                 {% endfor %}
-                <h6 class="underline">GF Replacement Ingredients: </h6>
+                <h6 class="underline">Gluten Free Replacements: </h6>
                 <p>{{ recipe.gf_ingredient}}</p>
+                <h6 class="underline">Allergens</h6>
+                <p>{{ recipe.allergens }}</p>
             </div>
             <div class="col s12 m8">
                 <h6 class="underline">Cooking Instructions: </h6>
                 {% for step in recipe.method %}
-                    <p>{{ step }}</p>
+                <p>{{ step }}</p>
                 {% endfor %}
                 <h6 class="underline">Additional Tips: </h6>
                 <p>{{ recipe.tips }}</p>
