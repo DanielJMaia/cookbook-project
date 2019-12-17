@@ -14,21 +14,21 @@ mongo = PyMongo(app)
 @app.route('/')
 def home():
     return render_template("index.html",
-    global_category=mongo.db.categories.find(),
-    local_category=mongo.db.categories.find())
+                            global_category=mongo.db.categories.find(),
+                            local_category=mongo.db.categories.find())
     
 @app.route('/get_recipes/<recipe_category>')
 def get_recipes(recipe_category):
     return render_template("recipes.html",
-    global_category=mongo.db.categories.find(),
-    recipes=mongo.db.recipes.find({"category": recipe_category}))
+                            global_category=mongo.db.categories.find(),
+                            recipes=mongo.db.recipes.find({"category": recipe_category}))
     
 @app.route('/search_recipes/', methods=["GET", "POST"])
 def search_recipes():
     if request.method == "POST":
-        post_request = request.get()
+        post_request = request.form.get('searchbar_input')
         print(post_request)
-    return render_template("search_recipe.html", global_category=mongo.db.categories.find(), recipes=mongo.db.recipes.find({"title" : {"$regex": "banana", "$options": "i"}}))
+    return render_template("search_recipe.html", global_category=mongo.db.categories.find(), recipes=mongo.db.recipes.find({"title" : {"$regex": post_request, "$options": "i"}}))
     
 @app.route('/add_recipe')
 def add_recipe():
