@@ -33,11 +33,6 @@ main {
   display: none;
 }
 
-#category_title {
-  margin-top: -70px;
-}
-
-
 .brand-logo {
   width: fit-content;
 }
@@ -80,10 +75,9 @@ main {
   min-width: 162px;
   float: left;
 }
-
-.submit_image_spacing {
-  padding-top: 50px!important;
-  float: right!important;
+.button_delete_min_width {
+  min-width: 170px;
+  float: left;
 }
 
 .recipe_banner {
@@ -199,6 +193,10 @@ main {
     padding-left: 3%;
     right: 0px;
   }
+  .submit_image_spacing {
+  padding-top: 50px!important;
+  float: right!important;
+}
 }
 
 @media (min-width: 1000px) {
