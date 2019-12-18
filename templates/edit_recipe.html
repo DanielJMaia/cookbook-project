@@ -88,15 +88,14 @@
                 <label for="allergens">Allergens</label>
             </div>
             <div class="col s12 center-align">
-                <button class="btn waves-effect waves-light button_form_min_width" type="submit" name="action">Edit
-                    <i class="material-icons right">send</i>
+                <button class="btn waves-effect waves-light button_form_min_width" type="submit" name="action">Save Changes
+                    <i class="material-icons right">edit</i>
                 </button>
             </div>
         </div>
         <div class="row">
             <div class="col s2">
-                <a class="waves-effect waves-light btn button_form_min_width red darken-2" id="delete_button">Delete</a>
-                <!-- <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn button_form_min_width red darken-2" id="delete_button">Delete</a> -->
+                <a class="waves-effect waves-light btn button_delete_min_width red darken-2" id="delete_button">Delete</a>
             </div>
         </div>
     </form>
@@ -106,7 +105,3 @@
 <script type="text/javascript" src="/static/js/delete.js"></script>
 <script type="text/javascript" src="/static/js/back.js"></script>
 {% endblock %}
-
-<!--
-onclick="return confirm('Are you sure you want to delete this? It CANNOT be undone!!!')"
--->
