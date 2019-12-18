@@ -10,7 +10,7 @@
 <form action="{{url_for('insert_recipe')}}" method="POST" class="col s12 m8" autocomplete="off">
     <div class="container recipe_modify_container">
         <div class="row">
-            <div class="col s11 m5 submit_image_spacing">
+            <div class="col s12 m5 submit_image_spacing">
                 <div class="card">
                     <div class="card-image">
                         <img src="/static/img/choose_image.png" class="image" alt="placeholder image or recipe image preview">
@@ -20,15 +20,15 @@
                     </div>
                 </div>
             </div>
-            <div class="input-field col s11 m7">
+            <div class="input-field col s12 m7">
                 <input id="recipe_title" type="text" class="validate" name="title" required/>
                 <label for="recipe_title">Recipe Title</label>
             </div>
-            <div class="input-field col s11 m7">
+            <div class="input-field col s12 m7">
                 <input id="recipe_description" type="text" class="validate" name="description" required/>
                 <label for="recipe_description">Description</label>
             </div>
-            <div class="input-field col s11 m7">
+            <div class="input-field col s12 m7">
                 <select name="category" required>
                         <option selected disabled value>Select category</option>
                     {% for cat in local_category %}
@@ -37,7 +37,7 @@
                 </select>
                 <label>Choose A Category!</label>
             </div>
-            <div class="input-field col s11 m7">
+            <div class="input-field col s12 m7">
                 <select name="difficulty" required>
                         <option selected disabled value>Select difficulty</option>
                     {% for diff in difficulty %}
@@ -46,27 +46,27 @@
                 </select>
                 <label>Ease of Preparation</label>
             </div>
-            <div class="input-field col s11 m7">
+            <div class="input-field col s12 m7">
                 <textarea id="ingredients" type="text" class="materialize-textarea" name="ingredients" required></textarea>
                 <label for="ingredients">Ingredients - Each Ingredient On A New Line</label>
             </div>
-            <div class="input-field col s11 m7">
+            <div class="input-field col s12 m7">
                 <input id="duration" type="text" class="validate" name="prep_duration" required/>
                 <label for="duration">Duration</label>
             </div>
-            <div class="input-field col s11 m7">
+            <div class="input-field col s12 m7">
                 <textarea id="textarea1" class="materialize-textarea" name="method" required></textarea>
                 <label for="textarea1">Method - Each Step On A New Line</label>
             </div>
-            <div class="input-field col s11 m7">
+            <div class="input-field col s12 m7">
                 <input id="gf_ingredient" type="text" class="validate" name="gf_ingredient"/>
                 <label for="gf_ingredient">Gluten Free Replacement Ingredients</label>
             </div>
-            <div class="input-field col s11 m7">
+            <div class="input-field col s12 m7">
                 <input id="tips" type="text" class="validate" name="tips"/>
                 <label for="tips">Extra Tips</label>
             </div>
-            <div class="input-field col s11 m7">
+            <div class="input-field col s12 m7">
                 <input id="allergens" type="text" class="validate" name="allergens"/>
                 <label for="allergens">Allergens</label>
             </div>
