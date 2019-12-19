@@ -2,7 +2,7 @@ $(document).on("keydown", ":input:not(textarea)" && "input:not(#searchbar_input)
     return event.key != "Enter";
 });
 
-$('[name="url"]').on('change', function() {
+$('[name="url"]').on('input', function() {
     $('img.image').prop('src', this.value);
 });
 
