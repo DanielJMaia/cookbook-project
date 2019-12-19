@@ -39,7 +39,7 @@
 			<ul class="sidenav" id="mobile-demo">
 				<li><a href="{{url_for('home')}}">Home</a></li>
 				<li><a href="{{url_for('add_recipe')}}">Add A Recipe</a></li>
-				{% for category in global_category %}
+				{% for category in local_category %}
 				<li><a href="{{url_for('get_recipes', recipe_category=category.title)}}">{{ category.title }}</a></li>
 				{% endfor %}
 			</ul>

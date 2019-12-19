@@ -13,21 +13,16 @@ app.config['MONGO_URI'] = os.getenv('MONGO_URI', "Env value not loaded")
 
 mongo = PyMongo(app)
 
-"""
-@app.context_processor
-def inject_local_category_for_all_templates():
-   return dict(local_category=mongo.db.categories.find())
-"""
+
 @app.route('/')
 def home():
     return render_template("index.html",
-                            global_category=mongo.db.categories.find(),
-                            local_category=mongo.db.categories.find())
+                            local_category=list(mongo.db.categories.find()))
     
 @app.route('/get_recipes/<recipe_category>')
 def get_recipes(recipe_category):
     return render_template("recipes.html",
-                            global_category=mongo.db.categories.find(),
+                            local_category=mongo.db.categories.find(),
                             current_category=recipe_category,
                             recipes=mongo.db.recipes.find({"category": recipe_category}))
     
@@ -37,14 +32,13 @@ def search_recipes():
         post_request = request.form.get('searchbar_input')
         print(post_request)
     return render_template("search_recipe.html",
-                            global_category=mongo.db.categories.find(), 
+                            local_category=mongo.db.categories.find(), 
                             recipes=mongo.db.recipes.find({"title" : {"$regex": post_request, "$options": "i"}}),
                             recipe_count=mongo.db.recipes.find({"title" : {"$regex": post_request, "$options": "i"}}).count())
     
 @app.route('/add_recipe')
 def add_recipe():
     return render_template("add_recipe.html",
-                            global_category=mongo.db.categories.find(),
                             local_category=mongo.db.categories.find(),
                             difficulty=mongo.db.difficulty.find())
     
@@ -70,7 +64,7 @@ def insert_recipe():
     }
     _id = recipes.insert_one(data)
     return render_template('view_recipe.html',
-                            global_category=mongo.db.categories.find(),
+                            local_category=mongo.db.categories.find(),
                             recipes = mongo.db.recipes.find({"_id": _id.inserted_id}))
     
 @app.route('/edit_recipe/<recipe_id>')
@@ -80,9 +74,8 @@ def edit_recipe(recipe_id):
     difficulty = mongo.db.difficulty.find()
     category_list = [category for category in categories]
     return render_template('edit_recipe.html', 
-                            recipe=recipe, global_category=category_list,
-                            difficulty=difficulty,
-                            local_category=mongo.db.categories.find())
+                            recipe=recipe, local_category=category_list,
+                            difficulty=difficulty)
 
 @app.route('/update_recipe/<recipe_id>', methods=["POST"])
 def update_recipe(recipe_id):
@@ -107,13 +100,13 @@ def update_recipe(recipe_id):
     })
     return render_template('view_recipe.html',
                             recipes = mongo.db.recipes.find({"_id": ObjectId(recipe_id)}), 
-                            global_category=mongo.db.categories.find())
+                            local_category=mongo.db.categories.find())
     
 @app.route('/view_recipe/<recipe_id>')
 def view_recipe(recipe_id):
     return render_template('view_recipe.html',
                             recipes = mongo.db.recipes.find({"_id": ObjectId(recipe_id)}),
-                            global_category=mongo.db.categories.find())
+                            local_category=mongo.db.categories.find())
   
 @app.route('/delete_recipe/<recipe_id>')
 def delete_recipe(recipe_id):
