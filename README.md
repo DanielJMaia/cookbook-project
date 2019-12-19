@@ -1,6 +1,7 @@
 TO DO LIST: Python and JS Validation?
 More testing
 Finish README
+Add Wireframes
 
 ### Celiac Haven - As someone with Celiac's disease it can be very challenging to adapt to the Gluten Free diet. Going out for meals becomes a lot more restritive, and cooking at home can become extremely monotonous. Finding recipes online becomes disheartening once you realise that nearly all of them require multiple ingredients to be replaced. Celiac Haven was created to approach that problem. It's a collection of entirely gluten free, yet delicious, recipes that people everywhere can contriubute to.
 

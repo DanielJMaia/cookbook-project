@@ -34,7 +34,11 @@ main {
 }
 
 .brand-logo {
-  width: fit-content;
+width: -moz-max-content;
+width: -webkit-max-content;
+width: -o-max-content;
+display: inline-block; /* max-content not supported on Microsoft Edge */
+font-size: 1.8rem!important;
 }
 
 #quote {
@@ -48,7 +52,8 @@ main {
 
 .quote_header {
   background-color: white;
-  width: fit-content;
+  
+  display: inline-block; /* max-content not supported on Microsoft Edge */
   padding: 13px;
   border-radius: 4px;
   margin-left: 15px;
@@ -131,7 +136,7 @@ main {
 
 .card-content {
   min-height: 110px;
-  padding: 24px 24px 1px 24px!important;
+  padding: 10px 24px 1px 24px!important;
 }
 
 .footer_icons {
@@ -158,7 +163,10 @@ main {
 }
 
 
-@media (min-width: 600px) {
+@media (min-width: 601px) {
+  .brand-logo {
+    font-size: 2.1rem!important;
+  }
   .recipe_information_box {
     position: absolute;
     right: 5%;
