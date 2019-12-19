@@ -39,7 +39,7 @@ def search_recipes():
 @app.route('/add_recipe')
 def add_recipe():
     return render_template("add_recipe.html",
-                            local_category=mongo.db.categories.find(),
+                            local_category=list(mongo.db.categories.find()),
                             difficulty=mongo.db.difficulty.find())
     
 @app.route('/insert_recipe', methods=["POST"])
