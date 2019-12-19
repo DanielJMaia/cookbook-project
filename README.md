@@ -1,15 +1,6 @@
 TO DO LIST: Python and JS Validation?
-
-Errors Encountered: Clashing between Materialize styles and my own. 
-Initializing materialize elements wasn't always working.
-The for loop that populates the navbar doesn't function at the same time as the for loop that populates index.html. No idea why.
-The categories dropdown on the add recipe page also breaks when the for loop gets introduced to the base html page. 
-How to do environment variables?
-Can't use jinja in JS, so I had to improvise for the delete button which uses sweetalert
-
-
-!!!!! SOLUTION TO DOUBLE VARIABLE ISSUE
-"In relation to the two variables and one collection, the issue has to do with the cursor object which is the way your app takes the information from the database. in short, it can only be done one which is why using the same for both is breaking it."
+More testing
+Finish README
 
 ### Celiac Haven - As someone with Celiac's disease it can be very challenging to adapt to the Gluten Free diet. Going out for meals becomes a lot more restritive, and cooking at home can become extremely monotonous. Finding recipes online becomes disheartening once you realise that nearly all of them require multiple ingredients to be replaced. Celiac Haven was created to approach that problem. It's a collection of entirely gluten free, yet delicious, recipes that people everywhere can contriubute to.
 
@@ -48,7 +39,7 @@ It was also important that users never need to navigate the page using the brows
         - All the available categories so that the user can go to a specific category no matter what page they're on.
     - The search field that the user can use to search specific recipes. 
     - A footer with information about the author of the website and the technologies used, as well as links to the authors GitHub and LinkedIN pages. 
-- The navbar has a search field so that user can 
+- The navbar has a search field so that user can look up specific recipes by either typing their entire name, or simply keywords such as "chicken" or "risotto"
 - The Home Page 
     - It has a large banner image with a slogan in the middle of it.
     - A list of category cards including an image:
@@ -255,13 +246,21 @@ Can't use jinja in JS, so I had to improvise for the delete button which uses sw
 Some recipes were taken from [Gousto](https://www.gousto.co.uk/) recipe pamphlets, and the chocolate cake was [Jamie Oliver's Gluten Free Chocolate Cake](https://www.jamieoliver.com/recipes/chocolate-recipes/gluten-free-chocolate-cake/)
 ### Media
 Images retrieved from [Pexels.com](https://www.pexels.com/) unless states otherwise.
+
 Smoothie Category Image found [here](https://beamingbaker.com/triple-berry-smoothie-5-ingredient-paleo-vegan-gluten-free-dairy-free/).
+
 Quote Background Image found [here](https://www.pexels.com/photo/burger-and-vegetables-placed-on-brown-wood-surface-1565982/).
+
 Spicy Chicken Rice Recipe Image found [here](https://www.tablespoon.com/recipes/mexican-chicken-and-rice-skillet/eda0017c-42a8-404b-bc47-22eebcd0586c).
+
 Chorizo Risotto Image found [here](https://www.taste.com.au/recipes/chorizo-pasta/6871b2f9-5686-4354-974d-d7aca8e94388).
+
 Sticky soy chicken recipe image found [here](https://www.bbc.co.uk/food/recipes/asian-style_sticky_23400).
+
 Placeholder upload image found [here](https://woodworkersbelfast.com/placeholder-png/).
+
 This is location of my [Imgur](https://imgur.com/gallery/GhNXH9p) gallery.
+
 
 ### Acknowledgements
 
