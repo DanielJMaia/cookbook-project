@@ -1,14 +1,5 @@
 TO DO LIST: Python and JS Validation?
 
-Smoothie Category Image: https://beamingbaker.com/triple-berry-smoothie-5-ingredient-paleo-vegan-gluten-free-dairy-free/
-Quote Background Image : https://www.pexels.com/photo/burger-and-vegetables-placed-on-brown-wood-surface-1565982/
-Spicy Chicken Rice Recipe Image: https://www.tablespoon.com/recipes/mexican-chicken-and-rice-skillet/eda0017c-42a8-404b-bc47-22eebcd0586c
-Chorizo Image - https://www.taste.com.au/recipes/chorizo-pasta/6871b2f9-5686-4354-974d-d7aca8e94388
-Sticky soy chicken recipe image - https://www.bbc.co.uk/food/recipes/asian-style_sticky_23400
-Placeholder Image location - https://woodworkersbelfast.com/placeholder-png/
-I got a LOT of my images from this website - https://www.pexels.com/
-library used: sweetalert: https://sweetalert.js.org/guides/
-
 Errors Encountered: Clashing between Materialize styles and my own. 
 Initializing materialize elements wasn't always working.
 The for loop that populates the navbar doesn't function at the same time as the for loop that populates index.html. No idea why.
@@ -121,17 +112,17 @@ This includes frameworks, libraries and services.
 - Database and Hosting Services
     - MongoDB - The database service where all text data for this project was hosted.
     - Heroku - Web Hosting service which was used to host the final version of the website
-    - Imgur - Image hosting since MongoDB has DB size restrictions.
+    - [Imgur](https://imgur.com/) - Image hosting since MongoDB has DB size restrictions.
 - Front end framework and libraries
     - JQuery - JavaScript framework used to initialize Materialize elements and the image preview section of edit_recipe.html and create_recipe.html.
-    - SweetAlert - This was used to create the custom delete alert when a user tried to delete a recipe. 
+    - [SweetAlert](https://sweetalert.js.org/guides/) - This was used to create the custom delete alert when a user tried to delete a recipe. 
 - Front end styling frameworks
-    - Materialize - This framework created by google was used for the design of this website. It handles responsive web design and provides classes for a large quantity of elements.
+    - [Materialize](https://materializecss.com/) - This framework created by google was used for the design of this website. It handles responsive web design and provides classes for a large quantity of elements.
 - Version Control
     - GitHub - Remote repository with git control
 - IDE
     - GitPod - An online cloud-based IDE built with deep GitHub integration, I switched to this after deep frustrations using AWS Cloud9 near the end of my project. The environment sharing feature was particularly useful, as well as the built-in bash terminal.
-    - AWS Cloud9 - An Amazon cloud based IDE with an integrated bash terminal. I switched from this because it crashes all the time on Firefox Developer Edition, signs you out randomly regardless of whether you're in the middle up typing a line of code or currently pushing something to GitHub or flask, which requires you to go through the tedious login process, and just generally had a serious of migrane inducing issues.
+    - AWS Cloud9 - An Amazon cloud based IDE with an integrated bash terminal. I switched from this because it crashes all the time on Firefox Developer Edition, signs you out randomly regardless of whether you're in the middle up typing a line of code or currently pushing something to GitHub or flask, which requires you to go through the tedious login process, and just generally had a series of migrane inducing issues.
 
 ---
 
@@ -171,7 +162,10 @@ Ensure that the following is installed on your system
 The steps to deploying this website on your system are as follows:
 1. Download this repository from GitHub.
 2. Add the following environment variables: IP - 0.0.0.0, PORT - 5000 and MONGO_URI you'll get in a moment. You can create these in a .env file, or if you're using GitPod simply add them to your environment variables in the dashboard.
-3. Add a requirement.txt file by running the following command - pip3 freeze –local > requirements.txt
+3. Add a requirement.txt file by running the following command 
+```
+pip3 freeze –local > requirements.txt
+```
 4. Create a MongoDB database called milestone-project-cookbook
 5. Add the following collections: categories, difficulty, recipes.
 6. Populate the difficulty catalogue with the following documents: 
@@ -239,12 +233,36 @@ in the terminal.
 git push heroku master
 ```
 
+---
+
+## Bugs, Problems and Difficulties
+As is the case with all software projects, there were a series of bugs and issues that I had to overcome. 
+
+
+Errors Encountered: Clashing between Materialize styles and my own. 
+Initializing materialize elements wasn't always working.
+The for loop that populates the navbar doesn't function at the same time as the for loop that populates index.html. No idea why.
+The categories dropdown on the add recipe page also breaks when the for loop gets introduced to the base html page. 
+How to do environment variables?
+Can't use jinja in JS, so I had to improvise for the delete button which uses sweetalert
+
+
+!!!!! SOLUTION TO DOUBLE VARIABLE ISSUE
+"In relation to the two variables and one collection, the issue has to do with the cursor object which is the way your app takes the information from the database. in short, it can only be done one which is why using the same for both is breaking it."
+
 ## Credits
 ### Content
+Some recipes were taken from [Gousto](https://www.gousto.co.uk/) recipe pamphlets, and the chocolate cake was [Jamie Oliver's Gluten Free Chocolate Cake](https://www.jamieoliver.com/recipes/chocolate-recipes/gluten-free-chocolate-cake/)
 ### Media
+Images retrieved from [Pexels.com](https://www.pexels.com/) unless states otherwise.
+Smoothie Category Image found [here](https://beamingbaker.com/triple-berry-smoothie-5-ingredient-paleo-vegan-gluten-free-dairy-free/).
+Quote Background Image found [here](https://www.pexels.com/photo/burger-and-vegetables-placed-on-brown-wood-surface-1565982/).
+Spicy Chicken Rice Recipe Image found [here](https://www.tablespoon.com/recipes/mexican-chicken-and-rice-skillet/eda0017c-42a8-404b-bc47-22eebcd0586c).
+Chorizo Risotto Image found [here](https://www.taste.com.au/recipes/chorizo-pasta/6871b2f9-5686-4354-974d-d7aca8e94388).
+Sticky soy chicken recipe image found [here](https://www.bbc.co.uk/food/recipes/asian-style_sticky_23400).
+Placeholder upload image found [here](https://woodworkersbelfast.com/placeholder-png/).
+This is location of my [Imgur](https://imgur.com/gallery/GhNXH9p) gallery.
+
 ### Acknowledgements
 
- 
-
-
-Tutor Support: Xavier, Antonija, Tim, Kevin
+ I'd like to thank my tutor Antonija for giving me some helpful advice and sending me some extremely useful reading material during meetings throughout the project. I'd also like to thank the tutor support team, notably Xavier, Tim and Kevin, for being incredibly helpful when I encountered difficulties. I'd especially like to thank Xavier for having a meeting with me to help me understand routes in python, then helping me switch over to GitPod and also helping me with putting my project up on Heroku, all in the same day!
