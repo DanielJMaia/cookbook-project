@@ -182,6 +182,10 @@ main {
   #recipe_information_row {
     padding: 0 25px 0 25px;
   }
+
+  #cooking_instruction_row {
+    text-align: justify;
+  }
   .search_icon {
     position: absolute;
     bottom: 0px;
