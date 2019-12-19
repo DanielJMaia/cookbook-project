@@ -37,7 +37,7 @@
                 <h6 class="underline">Allergens</h6>
                 <p>{{ recipe.allergens }}</p>
             </div>
-            <div class="col s12 m7 offset-m1">
+            <div class="col s12 m7 offset-m1" id="cooking_instruction_row">
                 <h6 class="underline">Cooking Instructions: </h6>
                 {% for step in recipe.method %}
                 <p>{{ step }}</p>
