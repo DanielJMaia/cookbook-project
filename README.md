@@ -161,6 +161,83 @@ On all browsers:
 ---
 
 ## Deployment
+### Local Deployment
+Ensure that the following is installed on your system
+- Python3
+- PIP3
+- PyMongo
+- Flask
+    - Flask PyMongo
+The steps to deploying this website on your system are as follows:
+1. Download this repository from GitHub.
+2. Add the following environment variables: IP - 0.0.0.0, PORT - 5000 and MONGO_URI you'll get in a moment. You can create these in a .env file, or if you're using GitPod simply add them to your environment variables in the dashboard.
+3. Add a requirement.txt file by running the following command - pip3 freeze –local > requirements.txt
+4. Create a MongoDB database called milestone-project-cookbook
+5. Add the following collections: categories, difficulty, recipes.
+6. Populate the difficulty catalogue with the following documents: 
+```
+_id: <ObjectID>
+difficulty: "Easy"
+
+_id: <ObjectID>
+difficulty: "Medium"
+
+_id: <ObjectID>
+difficulty: "Hard"
+```
+7. Populate the categories catalogue with the following documents:
+```
+_id: <ObjectID>
+title: "Breakfast"
+url: "https://i.imgur.com/bnodfjl.jpg"
+
+title: "Easy Meals"
+url: "https://i.imgur.com/N1MmIXr.jpg"
+
+title: "Smoothies & Shakes"
+url: "https://i.imgur.com/XdGfkfs.jpg"
+
+title: "Fancy Dishes On A Budget"
+url: "https://i.imgur.com/h4Yvo9d.jpg"
+
+title: "No Oven Needed"
+url: "https://i.imgur.com/JX323Oa.jpg"
+
+title: "Deserts"
+url: "https://i.imgur.com/aP70sED.jpgsd"
+
+```
+
+The recipes collection can be populated using the front-end.
+
+8. In MongoDB find the connect button for the Cluster and press connect  your application. Select Python from the list of Drivers and your current version of Python. Copy the connection string and use that as your MONGO_URI environment variable. Remember to replace "root":"password" with your MongoDB user username and password. 
+9. In the bash terminal type python3 app.py to run the application, and preview the running application in a browser or IDE preview window. 
+
+### Remote Deployment
+1. Create a Procfile by typing 
+```
+echo web: python run.py > Procfile 
+```
+You must ensure that it's pointing to the correct file, in this case the Procfile says "web: python3 app.py"
+2. Create an account for the web service hosting platform Heroku. 
+3. Install Heroku by typing in the terminal
+```
+npm install -g heroku
+```
+4. Type heroku in the terminal to ensure it's installed correctly, and if so type
+```
+heroku login
+```
+5. Create a new heroku project and set the config variables in settings > reveal config vars. They are the same three as set earlier, IP, PORT and MONGO_URI.
+6. After ensuring that you have the requirements.txt and Procfile files up to date, add the project to git by typing 
+```
+git add .
+``` 
+in the terminal. 
+7. Finally, push the project to Heroku by typing in the terminal
+```
+git push heroku master
+```
 
 ## Credits
 ### Content
