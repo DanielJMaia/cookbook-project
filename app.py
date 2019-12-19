@@ -13,6 +13,11 @@ app.config['MONGO_URI'] = os.getenv('MONGO_URI', "Env value not loaded")
 
 mongo = PyMongo(app)
 
+"""
+@app.context_processor
+def inject_local_category_for_all_templates():
+   return dict(local_category=mongo.db.categories.find())
+"""
 @app.route('/')
 def home():
     return render_template("index.html",
