@@ -1,6 +1,8 @@
-TO DO LIST: Python and JS Validation?
+TO DO LIST: 
+
+Python and JS Validation?
+
 More testing
-Finish README
 ### Celiac Haven 
 #### As someone with Celiac's disease it can be very challenging to adapt to the Gluten Free diet. Going out for meals becomes a lot more restritive, and cooking at home can become extremely monotonous. Finding recipes online becomes disheartening once you realise that nearly all of them require multiple ingredients to be replaced. Celiac Haven was created to approach that problem. It's a collection of entirely gluten free, yet delicious, recipes that people everywhere can contriubute to.
 
@@ -105,7 +107,7 @@ The edit recipe page contains an additional delete button that removes the recip
 - HTML - The language used to create the structure of the pages.
 - CSS - The language used to style pages.
 - JavaScript - The language used to create dynamic content such as the delete button popup.
-- Python
+- Python - The language used to handle everything relating to the backend, including Jinja routing and database access using PyMondo.
 ### Additional Technologies
 This includes frameworks, libraries and services.
 - Backend Frameworks
@@ -132,7 +134,7 @@ This includes frameworks, libraries and services.
 ## Testing
 Testing was done in the Chrome Browser, and due to time constraintss there was no automatic unit-testing. 
 ### Chrome Dev Tools
-The Chrome Dev Tools were the single most useful resource throughout the creation of this website. The most important features were
+The Chrome Dev Tools were the single most useful testing resource throughout the creation of this website. The most important features were
 - Console logging. This allowed me to view the value of variables and data from the DB in the console. If incorrect values, or no values, were being returned, I could pinpoint the exact issue.
 - Network logs were useful when I was creating all my routes. They allowed me to check that all my external files were loading.
 - Responsive Layout. This project was created using a mobile first mentality. Viewing the page on a large amount of sizes and screen ratio ensured that at no point the project wasn't accessible on all devices.
@@ -151,7 +153,7 @@ On all browsers:
 - The mobile version scales as intended, and provides 100% of the functionality of the desktop one.
 - Each navigation item was pressed from the index, category, recipe, edit recipe and add recipe pages. This includes the title which redirects to the home page. 
 - The searchbar was used on each of these pages.
-- An incorrect entry was typed in i.e. asdasd to make sure that the error message appeared. 
+- An incorrect entry was typed in i.e. "asdasd" to make sure that the error message appeared. 
 - Partial words were types in to make sure they still returned results. 
     - chicken - This returns all the recipes with chicken in their title.
     - thie - This returns the banana and blueberry smoothie.
@@ -297,7 +299,7 @@ Sticky soy chicken recipe image found [here](https://www.bbc.co.uk/food/recipes/
 
 Placeholder upload image found [here](https://woodworkersbelfast.com/placeholder-png/).
 
-This is location of my [Imgur](https://imgur.com/gallery/GhNXH9p) gallery.
+My Imgur gallery is currently private and therefore can only be viewed by me.
 
 
 ### Acknowledgements
