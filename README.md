@@ -9,7 +9,39 @@ As someone with Celiac's disease it can be very challenging to adapt to the Glut
 
 The website can be found [here](http://gf-cookbook.herokuapp.com/)
 
----
+## Table of Contents
+1. [**UX**](#ux)
+    - [**Colour Scheme**](#colour-scheme)
+    - [**Wireframes**](#wireframes)
+    - [**General Design Principles**](#general-design-principles)
+2. [**Features**](#features)
+    - [**Existing Features**](#existing-features)
+    - [**To-Do List**](#to-do-list)
+
+3. [**Technologies used**](#technologies-used)
+    - [**Languages**](#languages)
+    - [**Additional Technologies**](#additional-technologies)
+
+4. [**Testing**](#testing)
+    - [**Debugging in Chrome**](#debugging-in-chrome-dev-tools)
+    - [**Manual Testing**](#manual-testing)
+    -[**Validators**](#validators)
+
+5. [**Deployment**](#deployment)
+    - [**Local Setup**](#local-setup)
+    - [**Deployment Online**](#deployment-online)
+
+6. [**Bugs, Problems and Difficulties**](#bugs-problems-and-difficulties)
+    - [**Content**](#content)
+    - [**Media**](#media)
+    - [**Code**](#code)
+    - [**Acknowledgements**](#acknowledgements)
+
+7. [**Credits**](#credits)
+    - [**Content**](#content)
+    - [**Media**](#media)
+    - [**Acknowledgements**](#acknowledgements)
+
 
 
 ## UX
@@ -236,7 +268,7 @@ The recipes collection can be populated using the website.
 8. In MongoDB find the connect button for the Cluster and press connect  your application. Select Python from the list of Drivers and your current version of Python. Copy the connection string and use that as your MONGO_URI environment variable. Remember to replace "root":"password" with your MongoDB user username and password. 
 9. In the bash terminal type python3 app.py to run the application, and preview the running application in a browser or IDE preview window. 
 
-### Deployment
+### Deployment Online
 1. Create a Procfile by typing 
 ```
 echo web: python run.py > Procfile 
