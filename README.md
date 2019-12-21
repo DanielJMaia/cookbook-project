@@ -1,8 +1,3 @@
-TO DO LIST: 
-
-Python and JS Validation?
-
-More testing
 ### Celiac Haven 
 #### As someone with Celiac's disease it can be very challenging to adapt to the Gluten Free diet. Going out for meals becomes a lot more restritive, and cooking at home can become extremely monotonous. Finding recipes online becomes disheartening once you realise that nearly all of them require multiple ingredients to be replaced. Celiac Haven was created to approach that problem. It's a collection of entirely gluten free, yet delicious, recipes that people everywhere can contriubute to.
 
@@ -143,11 +138,11 @@ I do not have any devices that can run Safari. In a professional environment I a
 - Firefox Developer Edition
 - Microsoft Edge
 ### Validators
-HTML, CSS, JS and Python validators were used to ensure that the code was syntatically correct. For CSS, everything came back 100% correct. However, for the HTML files that wasn't the case, and this is due to Jinja. The W3 Validator returned all instances of {{}} as errors. The solution was to simply go through each error carefully and confirm that each one was direcltly related to isntances of Jinja templating. 
-- HTML Validator - [W3] (https://validator.w3.org/)
-- CSS Validator - [W3] (https://jigsaw.w3.org/css-validator/)
-- Python Validator - 
-- JS Validator - 
+HTML, CSS, JS and Python validators were used to ensure that the code was syntatically correct. For CSS, everything came back 100% correct. However, for the HTML files that wasn't the case, and this is due to Jinja. The W3 Validator returned all instances of {{}} as errors. The solution was to simply go through each error carefully and confirm that each one was direcltly related to isntances of Jinja templating. I checked that my JS code was syntatically correct using [esprima](https://esprima.org/demo/validate.html) by pasting the contents of one JS file at a time.
+- HTML Validator - [W3] (https://validator.w3.org/) - This only displayed errors with Jinja, and by going through the code carefully I ensured there were no other syntax mistakes.
+- CSS Validator - [W3] (https://jigsaw.w3.org/css-validator/) - No syntax errors were detected.
+- Python Validator - [extendsclass.com](https://extendsclass.com/python-tester.html) - No syntax errors were detected.
+- JS Validator - [esprima.org](https://esprima.org/demo/validate.html) - No syntax errors were  detected.
 ### Testing on all Browsers
 On all browsers:
 - The mobile version scales as intended, and provides 100% of the functionality of the desktop one.
