@@ -1,17 +1,16 @@
 Rename all the technologies used. Jinja is not backend for example, and Heroku is a cloud application platform.
-Add screenshot of website as README header.
 Testing: python linter. jsLint.
-Fill out the git clone bit.
 Link to the tutors' GitHub.
 
 
 <h1 align="center">
   <a href="http://gf-cookbook.herokuapp.com/" target="_blank"><img src="https://i.imgur.com/4M00e3p.png" alt="Home Page"/></a>
 </h1>
+
 ### Celiac Haven 
 This project is my submission for my Data Centric milestone project as part of my training to become a Full Stack Web Developer. The purpose is to apply skills learnt during the Python and Data Centric Development modules. This website uses what I learnt, specifically CRUD operations with the MongoDB database, and rendering data with Jinja and communicating with the backend using flask. The course is provided by the Code Institute. 
 
-As someone with Celiac's disease it can be very challenging to adapt to the Gluten Free diet. Going out for meals becomes a lot more restritive, and cooking at home can become extremely monotonous. Finding recipes online becomes disheartening once you realise that nearly all of them require multiple ingredients to be replaced. Celiac Haven was created to approach that problem. It's a collection of entirely gluten free, yet delicious, recipes that people everywhere can contribute to.
+As someone with Celiac's disease it can be very challenging to adapt to the Gluten Free diet. Going out for meals becomes a lot more restritive, and cooking at home can become extremely monotonous if you're always making the same three things. Finding recipes online becomes disheartening once you realise that nearly all of them require multiple ingredients to be replaced. Celiac Haven was created to approach that problem. It's a collection of gluten free, yet delicious, recipes that people everywhere can contribute to. The only gluten free replacements are ingredients that all celiacs already have at home!
 
 ---
 
@@ -116,29 +115,28 @@ The edit recipe page contains an additional delete button that removes the recip
 - Python - The language used to handle everything relating to the backend, including Jinja routing and database access using PyMondo.
 ### Additional Technologies
 This includes frameworks, libraries and services.
-- Backend Frameworks
-    - Jinja - Web Template engine for Python.
-    - Flask - Python Micro Framework that allowed for routing between my various pages.
-- Database and Hosting Services
-    - MongoDB - The database service where all text data for this project was hosted.
-    - Heroku - Web Hosting service which was used to host the final version of the website
-    - [Imgur](https://imgur.com/) - Image hosting services.
-- Front end framework and libraries
-    - JQuery - JavaScript framework used to initialize Materialize elements and the image preview section of edit_recipe.html and create_recipe.html.
-    - [SweetAlert](https://sweetalert.js.org/guides/) - This was used to create the custom delete alert when a user tried to delete a recipe. 
-    - [MaterializeCSS](https://materializecss.com/) - This based on material design was used for the design of this website. It handles responsive web design and provides classes for a large quantity of elements.
-- Version Control
-    - GitHub - GitHub provided me with a remote repository with git control
-- IDE
-    - GitPod - An online cloud-based IDE built with deep GitHub integration, I switched to this after deep frustrations using AWS Cloud9 near the end of my project. The environment sharing feature was particularly useful, as well as the built-in bash terminal.
-    - AWS Cloud9 - An Amazon cloud based IDE with an integrated bash terminal. I switched from this because it crashes all the time on Firefox Developer Edition, signs you out randomly regardless of whether you're in the middle up typing a line of code or currently pushing something to GitHub or flask, which requires you to go through the tedious login process, and just generally had a series of migrane inducing issues.
+- [Jinja](https://jinja.palletsprojects.com/en/2.10.x/) - Web Template engine for Python.
+- [Flask](http://flask.palletsprojects.com/en/1.1.x/) - Python Micro Framework that allowed for routing between my various pages.
+
+
+- [MongoDB](https://www.mongodb.com) - The database service where all text data for this project was hosted. MongoDB is a cross-platform document-oriented database program classified as a NoSQL database program.
+- [Heroku](https://heroku.com/) - Cloud platform service which was used to host the final version of the website.
+- [Imgur](https://imgur.com/) - Image hosting service.
+
+
+- [JQuery](https://jquery.com/) - JavaScript library used to initialize Materialize elements and the image preview section of edit_recipe.html and create_recipe.html.
+- [SweetAlert](https://sweetalert.js.org/guides/) - This was used to create the custom delete alert when a user tried to delete a recipe. 
+- [MaterializeCSS](https://materializecss.com/) - Based on material design, MaterializeCSS was used for the design of this website. It handles responsive web design and provides classes for a large quantity of elements.
+- [GitHub](https://github.com/) - GitHub provides a remote repository with git control.
+- [GitPod](https://gitpod.io) - An online cloud-based IDE built with deep GitHub integration, I switched to this after deep frustrations using AWS Cloud9 near the end of my project. The environment sharing feature was particularly useful, as well as the built-in bash terminal.
+- AWS Cloud9 - An Amazon cloud based IDE with an integrated bash terminal. I switched from this because it crashes all the time on Firefox Developer Edition, signs you out randomly regardless of whether you're in the middle up typing a line of code or currently pushing something to GitHub or flask, which requires you to go through the tedious login process, and just generally had a series of migrane inducing issues.
 
 ---
 
 
 ## Testing
 Testing was done in the Chrome Browser, and due to time constraints there was no automatic unit-testing. 
-### Chrome Dev Tools
+### Debugging in Chrome Dev Tools
 The Chrome Dev Tools were the single most useful debugging resource throughout the creation of this website. The most important features were
 - Console logging. This allowed me to view the value of variables and data from the DB in the console. If incorrect values, or no values, were being returned, I could pinpoint the exact issue.
 - Network logs were useful when I was creating all my routes. They allowed me to check that all my external files were loading.
@@ -191,7 +189,7 @@ Ensure that the following is installed on your system
 The steps to deploying this website on your system are as follows:
 1. Download this repository from GitHub, or type the command
 ```
-git clone
+git clone https://github.com/DanielJMaia/cookbook-project.git
 ```
 2. Add the following environment variables: IP - 0.0.0.0, PORT - 5000 and MONGO_URI you'll get in a moment. You can create these in a .env file, or if you're using GitPod simply add them to your environment variables in the dashboard.
 3. Add a requirement.txt file by running the following command 
@@ -313,4 +311,4 @@ My Imgur gallery is currently private and therefore can only be viewed by me.
 
 ### Acknowledgements
 
- I'd like to thank my mentor Antonija for giving me some helpful advice and sending me some extremely useful reading material during meetings throughout the project. I'd also like to thank the tutor support team, notably Xavier, Tim and Kevin, for being incredibly helpful when I encountered difficulties. I'd especially like to thank Xavier for having a meeting with me to help me understand routes in python, then helping me switch over to GitPod and also helping me with putting my project up on Heroku, all in the same day!
+ I'd like to thank my mentor [Antonija](https://github.com/tonkec) for giving me some helpful advice and sending me some extremely useful reading material during meetings throughout the project. I'd also like to thank the tutor support team, notably [Xavier](https://www.linkedin.com/in/dev-xavier-astor/?originalSubdomain=ie), [Tim](https://github.com/TravelTimN) and [Kevin](https://www.linkedin.com/in/kevinloughrey/?originalSubdomain=ie), for being incredibly helpful when I encountered difficulties. I'd especially like to thank [Xavier](https://www.linkedin.com/in/dev-xavier-astor/?originalSubdomain=ie) for having a meeting with me to help me understand routes in python, then helping me switch over to GitPod and also helping me with putting my project up on Heroku, all in the same day!
