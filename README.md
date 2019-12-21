@@ -1,11 +1,22 @@
+Rename all the technologies used. Jinja is not backend for example, and Heroku is a cloud application platform.
+Add screenshot of website as README header.
+Testing: python linter. jsLint.
+Fill out the git clone bit.
+Link to the tutors' GitHub.
+
+
+<h1 align="center">
+  <a href="http://gf-cookbook.herokuapp.com/" target="_blank"><img src="https://i.imgur.com/4M00e3p.png" alt="Home Page"/></a>
+</h1>
 ### Celiac Haven 
-#### As someone with Celiac's disease it can be very challenging to adapt to the Gluten Free diet. Going out for meals becomes a lot more restritive, and cooking at home can become extremely monotonous. Finding recipes online becomes disheartening once you realise that nearly all of them require multiple ingredients to be replaced. Celiac Haven was created to approach that problem. It's a collection of entirely gluten free, yet delicious, recipes that people everywhere can contriubute to.
+This project is my submission for my Data Centric milestone project as part of my training to become a Full Stack Web Developer. The purpose is to apply skills learnt during the Python and Data Centric Development modules. This website uses what I learnt, specifically CRUD operations with the MongoDB database, and rendering data with Jinja and communicating with the backend using flask. The course is provided by the Code Institute. 
+
+As someone with Celiac's disease it can be very challenging to adapt to the Gluten Free diet. Going out for meals becomes a lot more restritive, and cooking at home can become extremely monotonous. Finding recipes online becomes disheartening once you realise that nearly all of them require multiple ingredients to be replaced. Celiac Haven was created to approach that problem. It's a collection of entirely gluten free, yet delicious, recipes that people everywhere can contribute to.
 
 ---
 
 
 ## UX
-This project is my submission for my Data Centric milestone project as part of my training to become a Full Stack Web Developer. The purpose is to apply skills learnt during the Python and Data Centric Development modules. This website uses what I learnt, specifically CRUD operations with the MongoDB database, and sending data to the backend with Jinja. The course is provided by the Code Institute. 
 ### User Stories 
 Users of the site are able to:
 - Use the search bar to search for specific recipes or type in keywords such as "pasta" to bring up a list, or give an error if there's no results returned. This allows users to easily find recipes they want when they have something in mind without having to access a speific category and browse the lists.
@@ -88,7 +99,7 @@ This page contains a form that the user can use to create a new recipe. The inpu
 This is very similar to the submission page, except all the fields are already filled out with the values for the recipes.
 
 The edit recipe page contains an additional delete button that removes the recipe and redirects the user to the home page. This delete button displays a custom popup which was created using SweetAlert. Because I wanted to ensure that the user clicked delete and then confirmed they wanted to delete the page before the form was submitted, I couldn't wire up the form submission to the delete button in the way I'd done with the rest of the form submission buttons. Instead, clicking the delete button ONLY runs the JavaScript function for the alert, and submitting the form is handled using the form.submit() method in Javascript when the user presses yes after the warning message is displayed.
-### Potential Features
+### To-Do List
 - User profile
     - If a user can tie entries to their profile, it'd allow for extra security. They'd only be able to delete and edit recipes they've created.
 - Additional Filtering
@@ -111,14 +122,13 @@ This includes frameworks, libraries and services.
 - Database and Hosting Services
     - MongoDB - The database service where all text data for this project was hosted.
     - Heroku - Web Hosting service which was used to host the final version of the website
-    - [Imgur](https://imgur.com/) - Image hosting since MongoDB has DB size restrictions.
+    - [Imgur](https://imgur.com/) - Image hosting services.
 - Front end framework and libraries
     - JQuery - JavaScript framework used to initialize Materialize elements and the image preview section of edit_recipe.html and create_recipe.html.
     - [SweetAlert](https://sweetalert.js.org/guides/) - This was used to create the custom delete alert when a user tried to delete a recipe. 
-- Front end styling frameworks
-    - [Materialize](https://materializecss.com/) - This framework created by google was used for the design of this website. It handles responsive web design and provides classes for a large quantity of elements.
+    - [MaterializeCSS](https://materializecss.com/) - This based on material design was used for the design of this website. It handles responsive web design and provides classes for a large quantity of elements.
 - Version Control
-    - GitHub - Remote repository with git control
+    - GitHub - GitHub provided me with a remote repository with git control
 - IDE
     - GitPod - An online cloud-based IDE built with deep GitHub integration, I switched to this after deep frustrations using AWS Cloud9 near the end of my project. The environment sharing feature was particularly useful, as well as the built-in bash terminal.
     - AWS Cloud9 - An Amazon cloud based IDE with an integrated bash terminal. I switched from this because it crashes all the time on Firefox Developer Edition, signs you out randomly regardless of whether you're in the middle up typing a line of code or currently pushing something to GitHub or flask, which requires you to go through the tedious login process, and just generally had a series of migrane inducing issues.
@@ -127,9 +137,9 @@ This includes frameworks, libraries and services.
 
 
 ## Testing
-Testing was done in the Chrome Browser, and due to time constraintss there was no automatic unit-testing. 
+Testing was done in the Chrome Browser, and due to time constraints there was no automatic unit-testing. 
 ### Chrome Dev Tools
-The Chrome Dev Tools were the single most useful testing resource throughout the creation of this website. The most important features were
+The Chrome Dev Tools were the single most useful debugging resource throughout the creation of this website. The most important features were
 - Console logging. This allowed me to view the value of variables and data from the DB in the console. If incorrect values, or no values, were being returned, I could pinpoint the exact issue.
 - Network logs were useful when I was creating all my routes. They allowed me to check that all my external files were loading.
 - Responsive Layout. This project was created using a mobile first mentality. Viewing the page on a large amount of sizes and screen ratio ensured that at no point the project wasn't accessible on all devices.
@@ -137,13 +147,8 @@ The Chrome Dev Tools were the single most useful testing resource throughout the
 I do not have any devices that can run Safari. In a professional environment I assume I'd have colleagues who own Macs. If not, I'd have to run Macintosh (or perhaps just Safari) in a virtual environment on Windows or Linux.
 - Firefox Developer Edition
 - Microsoft Edge
-### Validators
-HTML, CSS, JS and Python validators were used to ensure that the code was syntatically correct. For CSS, everything came back 100% correct. However, for the HTML files that wasn't the case, and this is due to Jinja. The W3 Validator returned all instances of {{}} as errors. The solution was to simply go through each error carefully and confirm that each one was direcltly related to isntances of Jinja templating. I checked that my JS code was syntatically correct using [esprima](https://esprima.org/demo/validate.html) by pasting the contents of one JS file at a time.
-- HTML Validator - [W3] (https://validator.w3.org/) - This only displayed errors with Jinja, and by going through the code carefully I ensured there were no other syntax mistakes.
-- CSS Validator - [W3] (https://jigsaw.w3.org/css-validator/) - No syntax errors were detected.
-- Python Validator - [extendsclass.com](https://extendsclass.com/python-tester.html) - No syntax errors were detected.
-- JS Validator - [esprima.org](https://esprima.org/demo/validate.html) - No syntax errors were  detected.
-### Testing on all Browsers
+
+### Manual Testing
 On all browsers:
 - The mobile version scales as intended, and provides 100% of the functionality of the desktop one.
 - Each navigation item was pressed from the index, category, recipe, edit recipe and add recipe pages. This includes the title which redirects to the home page. 
@@ -164,12 +169,18 @@ On all browsers:
 - Each category displays the appropriate recipes, and clicking a recipe displays the appropriate page.
 - The social media links open in a new tab and direct to the correct github and LinkedIN profiles
 
+### Validators
+HTML, CSS, JS and Python validators were used to ensure that the code was syntatically correct. For CSS, everything came back 100% correct. However, for the HTML files that wasn't the case, and this is due to Jinja. The W3 Validator returned all instances of {{}} as errors. The solution was to simply go through each error carefully and confirm that each one was direcltly related to isntances of Jinja templating. I checked that my JS code was syntatically correct using [esprima](https://esprima.org/demo/validate.html) by pasting the contents of one JS file at a time.
+- HTML Validator - [W3] (https://validator.w3.org/) - This only displayed errors with Jinja, and by going through the code carefully I ensured there were no other syntax mistakes.
+- CSS Validator - [W3] (https://jigsaw.w3.org/css-validator/) - No syntax errors were detected.
+- Python Validator - [extendsclass.com](https://extendsclass.com/python-tester.html) - No syntax errors were detected.
+- JS Validator - [esprima.org](https://esprima.org/demo/validate.html) - No syntax errors were  detected.
 
 ---
 
 
 ## Deployment
-### Local Deployment
+### Local Setup
 Ensure that the following is installed on your system
 - Python3
 - PIP3
@@ -178,13 +189,16 @@ Ensure that the following is installed on your system
 - Git
 
 The steps to deploying this website on your system are as follows:
-1. Download this repository from GitHub.
+1. Download this repository from GitHub, or type the command
+```
+git clone
+```
 2. Add the following environment variables: IP - 0.0.0.0, PORT - 5000 and MONGO_URI you'll get in a moment. You can create these in a .env file, or if you're using GitPod simply add them to your environment variables in the dashboard.
 3. Add a requirement.txt file by running the following command 
 ```
 pip3 freeze –local > requirements.txt
 ```
-4. Create a MongoDB database called milestone-project-cookbook
+4. Create a database in MongoDB called milestone-project-cookbook
 5. Add the following collections: categories, difficulty, recipes.
 6. Populate the difficulty collection with the following documents: 
 ```
@@ -222,12 +236,12 @@ url: "https://i.imgur.com/aP70sED.jpgsd"
 
 Images of the three catalogues can be found [here](https://github.com/DanielJMaia/cookbook-project/issues/2)
 
-The recipes collection can be populated using the front-end.
+The recipes collection can be populated using the website.
 
 8. In MongoDB find the connect button for the Cluster and press connect  your application. Select Python from the list of Drivers and your current version of Python. Copy the connection string and use that as your MONGO_URI environment variable. Remember to replace "root":"password" with your MongoDB user username and password. 
 9. In the bash terminal type python3 app.py to run the application, and preview the running application in a browser or IDE preview window. 
 
-### Remote Deployment
+### Deployment
 1. Create a Procfile by typing 
 ```
 echo web: python run.py > Procfile 
@@ -266,7 +280,7 @@ Another issue I had was that pointer objects such as my categories variable can'
 global_category=mongo.db.categories.find(),
 local_category=mongo.db.categories.find())
 ```
-However, this is bad practice and after my tutor meeting I was told I should really try to figure it out. The obvious take the easy way out, in this case to just hard code the 6 navigation bar items. That would have taken 5 minutes and I doubt it'd have affected the overall quality of the page one bit, but after spending far more time than I'd like to admit trying to find a solution I wasn't ready to give up. The final solution was to change the variable from a pointer object to a list object by simply typing
+However, this is bad practice and after my mentor meeting I was told I should really try to figure it out. The obvious take the easy way out, in this case to just hard code the 6 navigation bar items. That would have taken 5 minutes and I doubt it'd have affected the overall quality of the page one bit, but after spending far more time than I'd like to admit trying to find a solution I wasn't ready to give up. The final solution was to change the variable from a pointer object to a list object by simply typing
 ```
 local_category=list(mongo.db.categories.find()))
 ```
@@ -299,4 +313,4 @@ My Imgur gallery is currently private and therefore can only be viewed by me.
 
 ### Acknowledgements
 
- I'd like to thank my tutor Antonija for giving me some helpful advice and sending me some extremely useful reading material during meetings throughout the project. I'd also like to thank the tutor support team, notably Xavier, Tim and Kevin, for being incredibly helpful when I encountered difficulties. I'd especially like to thank Xavier for having a meeting with me to help me understand routes in python, then helping me switch over to GitPod and also helping me with putting my project up on Heroku, all in the same day!
+ I'd like to thank my mentor Antonija for giving me some helpful advice and sending me some extremely useful reading material during meetings throughout the project. I'd also like to thank the tutor support team, notably Xavier, Tim and Kevin, for being incredibly helpful when I encountered difficulties. I'd especially like to thank Xavier for having a meeting with me to help me understand routes in python, then helping me switch over to GitPod and also helping me with putting my project up on Heroku, all in the same day!
