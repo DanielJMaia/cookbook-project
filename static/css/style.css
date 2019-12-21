@@ -52,14 +52,12 @@ font-size: 1.8rem!important;
 
 .quote_header {
   background-color: white;
-  
   display: inline-block; /* max-content not supported on Microsoft Edge */
   padding: 13px;
   border-radius: 4px;
   margin-left: 15px;
   margin-right: 15px;
 }
-
 
 #submit_recipe_header {
   background-color: white;
@@ -123,7 +121,6 @@ font-size: 1.8rem!important;
   cursor: pointer;
 }
 
-
 .separation {
   min-height: 2rem;
   background-color: #faebd7;
@@ -153,7 +150,6 @@ font-size: 1.8rem!important;
  }
 
 /* Text Decoration Classes */
-
 .underline {
   text-decoration: underline;
 }
@@ -161,7 +157,6 @@ font-size: 1.8rem!important;
 .no_bottom_margin {
   margin-bottom: 0px;
 }
-
 
 @media (min-width: 601px) {
   .brand-logo {
@@ -226,7 +221,6 @@ font-size: 1.8rem!important;
   }
 }
 
-
 @media (min-width: 1200px) {
   .recipe_information_box {
     width: 20%;
@@ -248,8 +242,6 @@ font-size: 1.8rem!important;
   }
 }
 
-
-
 @media (min-width: 2560px) {
   #search_icon_click {
     cursor: pointer;
@@ -258,5 +250,3 @@ font-size: 1.8rem!important;
     right: 0px;
   }
 }
-
-@media (min-width: 3840px) {}
