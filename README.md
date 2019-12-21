@@ -1,8 +1,3 @@
-Rename all the technologies used. Jinja is not backend for example, and Heroku is a cloud application platform.
-Testing: python linter. jsLint.
-Link to the tutors' GitHub.
-
-
 <h1 align="center">
   <a href="http://gf-cookbook.herokuapp.com/" target="_blank"><img src="https://i.imgur.com/4M00e3p.png" alt="Home Page"/></a>
 </h1>
@@ -10,7 +5,7 @@ Link to the tutors' GitHub.
 ### Celiac Haven 
 This project is my submission for my Data Centric milestone project as part of my training to become a Full Stack Web Developer. The purpose is to apply skills learnt during the Python and Data Centric Development modules. This website uses what I learnt, specifically CRUD operations with the MongoDB database, and rendering data with Jinja and communicating with the backend using flask. The course is provided by the Code Institute. 
 
-As someone with Celiac's disease it can be very challenging to adapt to the Gluten Free diet. Going out for meals becomes a lot more restritive, and cooking at home can become extremely monotonous if you're always making the same three things. Finding recipes online becomes disheartening once you realise that nearly all of them require multiple ingredients to be replaced. Celiac Haven was created to approach that problem. It's a collection of gluten free, yet delicious, recipes that people everywhere can contribute to. The only gluten free replacements are ingredients that all celiacs already have at home!
+As someone with Celiac's disease it can be very challenging to adapt to the Gluten Free diet. Going out for meals becomes a lot more restrictive, and cooking at home can become extremely monotonous if you're always making the same three things. Finding recipes online becomes disheartening once you realize that nearly all of them require multiple ingredients to be replaced. Celiac Haven was created to approach that problem. It's a collection of gluten free, yet delicious, recipes that people everywhere can contribute to. The only gluten free replacements are ingredients that all celiacs already have at home!
 
 ---
 
@@ -18,14 +13,14 @@ As someone with Celiac's disease it can be very challenging to adapt to the Glut
 ## UX
 ### User Stories 
 Users of the site are able to:
-- Use the search bar to search for specific recipes or type in keywords such as "pasta" to bring up a list, or give an error if there's no results returned. This allows users to easily find recipes they want when they have something in mind without having to access a speific category and browse the lists.
+- Use the search bar to search for specific recipes or type in keywords such as "pasta" to bring up a list, or give an error if there's no results returned. This allows users to easily find recipes they want when they have something in mind without having to access a specific category and browse the lists.
 - Access a list of recipe categories to narrow down their search using the navigation menu or by browsing the home screen. This is useful for users who want to cook a specific meal i.e. dinner and want to easily access all the meals they can cook.
 - View recipes of a single category including a brief description. Building upon the previous user story, this allows the user to view specific recipes that might appeal to them.
 - Access a recipe editing page from the list of recipes and recipe page itself. This is useful if a recipe changes, was incorrectly uploaded in the first place or the user wants to add some tips they've picked up.
-- Delete a recipe from the recipe editing page. This was initially an option alongisde the "edit" button on the recipe page, but it felt important to make deleting less easy to accidentally press.
+- Delete a recipe from the recipe editing page. This was initially an option alongside the "edit" button on the recipe page, but it felt important to make deleting less easy to accidentally press.
 - Create a new recipe and add it to a specific category.
 - Preview the image they want to add by adding the link and having show them. This allows the user to make sure that it's a working URL, as well as preview the image to make sure they're happy with it.  
-- Navigate the page without ever having to use page navigation offered by the browser. The navbar on the right is permanant and the back arrow appears on all pages except the home page.
+- Navigate the page without ever having to use page navigation offered by the browser. The navbar on the right is permanent and the back arrow appears on all pages except the home page.
 - Navigate the website on any device they want. It's fully functional on mobile, tablets and desktops. If a user is out and wants to access their recipes on their phone it's easy, and if they want to upload a new one they learn on the road it's not more difficult on mobile devices. 
 
 ### Colour Scheme
@@ -51,7 +46,7 @@ It was also important that users never need to navigate the page using the brows
         - Home page where the user can view all the recipe categories.
         - The recipe creation page which allows users to submit a new recipe.
         - All the available categories so that the user can go to a specific category no matter what page they're on.
-        - The search field that that can be used to search for specific recipes, or simply type in keywords.
+        - The search field that can be used to search for specific recipes, or simply type in keywords.
     - A footer with information about the author of the website and the technologies used, as well as links to the authors' GitHub and LinkedIN pages. 
 The navigation bar is scalable, for it uses a for loop to load the different categories. This was chosen over hard coding the 6 categories so a customer with very limited knowledge of coding can simply add a new category to the list in the database, add a picture URL, and everything on the website automatically updates to reflect this. This scalable approach was used in the edit recipe and add recipe pages for the categories dropdown for the same reason.
 - The Home Page 
@@ -79,7 +74,7 @@ The navigation bar is scalable, for it uses a for loop to load the different cat
     - Additional Tips
     - Edit recipe button
 - Add submission page
-It was important to me that the user coulnd't submit this form by pressing enter, or if required fields weren't filled out. To ensure that enter didn't submit the form, the enter button was disabled unless the user was typing in the search bar or in the textareas (new lines are important in the text area, they each represent an array item). The required keyword was added to all input fields except for tips, as I didn't deem that very important.
+It was important to me that the user couldn't submit this form by pressing enter, or if required fields weren't filled out. To ensure that enter didn't submit the form, the enter button was disabled unless the user was typing in the search bar or in the textareas (new lines are important in the text area, they each represent an array item). The required keyword was added to all input fields except for tips, as I didn't deem that very important.
 This page contains a form that the user can use to create a new recipe. The inputs are as follows:
     - Recipe Title
     - Description
@@ -112,7 +107,7 @@ The edit recipe page contains an additional delete button that removes the recip
 - HTML - The language used to create the structure of the pages.
 - CSS - The language used to style pages.
 - JavaScript - The language used to create dynamic content such as the delete button popup.
-- Python - The language used to handle everything relating to the backend, including Jinja routing and database access using PyMondo.
+- Python - The language used to handle everything relating to the backend, including Jinja routing and database access using PyMongo.
 ### Additional Technologies
 This includes frameworks, libraries and services.
 - [Jinja](https://jinja.palletsprojects.com/en/2.10.x/) - Web Template engine for Python.
@@ -129,7 +124,7 @@ This includes frameworks, libraries and services.
 - [MaterializeCSS](https://materializecss.com/) - Based on material design, MaterializeCSS was used for the design of this website. It handles responsive web design and provides classes for a large quantity of elements.
 - [GitHub](https://github.com/) - GitHub provides a remote repository with git control.
 - [GitPod](https://gitpod.io) - An online cloud-based IDE built with deep GitHub integration, I switched to this after deep frustrations using AWS Cloud9 near the end of my project. The environment sharing feature was particularly useful, as well as the built-in bash terminal.
-- AWS Cloud9 - An Amazon cloud based IDE with an integrated bash terminal. I switched from this because it crashes all the time on Firefox Developer Edition, signs you out randomly regardless of whether you're in the middle up typing a line of code or currently pushing something to GitHub or flask, which requires you to go through the tedious login process, and just generally had a series of migrane inducing issues.
+- AWS Cloud9 - An Amazon cloud based IDE with an integrated bash terminal. I switched from this because it crashes all the time on Firefox Developer Edition, signs you out randomly regardless of whether you're in the middle up typing a line of code or currently pushing something to GitHub or flask, which requires you to go through the tedious login process, and just generally had a series of migraine inducing issues.
 
 ---
 
@@ -168,11 +163,11 @@ On all browsers:
 - The social media links open in a new tab and direct to the correct github and LinkedIN profiles
 
 ### Validators
-HTML, CSS, JS and Python validators were used to ensure that the code was syntatically correct. For CSS, everything came back 100% correct. However, for the HTML files that wasn't the case, and this is due to Jinja. The W3 Validator returned all instances of {{}} as errors. The solution was to simply go through each error carefully and confirm that each one was direcltly related to isntances of Jinja templating. I checked that my JS code was syntatically correct using [esprima](https://esprima.org/demo/validate.html) by pasting the contents of one JS file at a time.
+HTML, CSS, JS and Python validators were used to ensure that the code was syntactically correct. For CSS, everything came back 100% correct. However, for the HTML files that wasn't the case, and this is due to Jinja. The W3 Validator returned all instances of {{}} as errors. The solution was to simply go through each error carefully and confirm that each one was directly related to instances of Jinja templating. I checked that my JS code was syntactically correct using [esprima](https://esprima.org/demo/validate.html) by pasting the contents of one JS file at a time.
 - HTML Validator - [W3] (https://validator.w3.org/) - This only displayed errors with Jinja, and by going through the code carefully I ensured there were no other syntax mistakes.
 - CSS Validator - [W3] (https://jigsaw.w3.org/css-validator/) - No syntax errors were detected.
-- Python Validator - [extendsclass.com](https://extendsclass.com/python-tester.html) - No syntax errors were detected.
-- JS Validator - [esprima.org](https://esprima.org/demo/validate.html) - No syntax errors were  detected.
+- Python Validator - [extendsclass.com](https://extendsclass.com/python-tester.html) - No syntax errors were detected. I also was able to run the code successfully without any console errors.
+- JS Validator - [JSLint](https://www.jslint.com/) - No syntax errors were  detected.
 
 ---
 
@@ -271,7 +266,7 @@ git push heroku master
 ## Bugs, Problems and Difficulties
 As is the case with all software projects, there were a series of bugs and issues that I had to overcome. First of all, Materialize styles are very difficult to override. I found that when the materialize defaults weren't cutting it and I wanted to use my own custom CSS, it was sometimes necessary to use !important which I really don't like doing. 
 
-When I initially added the delete button I was using the window alert method. This was extremely rough looking and I wanted to find something else, which led me to SweetAlert. However, after creating the cutom warning message I found that clicking the delete button would display the message and then instantly delete the recipe regardless of what the user clicked. This makes sense but it required a clever workaround which was suggested by the tutor Kevin, which was to tie the form submission to the if statement in JS instead of the usual approach taken with my other buttons. 
+When I initially added the delete button I was using the window alert method. This was extremely rough looking and I wanted to find something else, which led me to SweetAlert. However, after creating the custom warning message I found that clicking the delete button would display the message and then instantly delete the recipe regardless of what the user clicked. This makes sense but it required a clever workaround which was suggested by the tutor Kevin, which was to tie the form submission to the if statement in JS instead of the usual approach taken with my other buttons. 
 
 Another issue I had was that pointer objects such as my categories variable can't looped through more than once per page. I didn't know this. My base.html file loops through the categories to populate the navigation bar. This categories variable is then also used in specific pages such as index.html to create all the categories cards, and edit/create recipe pages to populate the dropdowns. As a result of only being able to loop through the pointer object once, those pages weren't loading those elements. The home page wasn't displaying categories and the edit/create recipe pages dropdowns weren't working. That is to say, all instances of the variable except the very first time it's looped through weren't working because they were trying to start their loop at the end of the collection. The initial solution was simply to create another, identical variable i.e.
 ```
@@ -285,7 +280,7 @@ local_category=list(mongo.db.categories.find()))
 I'm glad I spend the extra time on this instead of taking the easy route, I doubt I'll ever forget this issue.
 
 This was my first time working with environment variables, and because of this I wasn't really sure how they worked. I understood the principle of them, but in practice I wasn't up to scratch. As such, when I went to host my project on Heroku I forgot to set the hidden variables there and it simply didn't work. After a very useful chat with Xavier, I now understand them quite nicely. 
-Another issue arose when I was hosting my project, and that was that my Procile was incorrect. For some reason, when I created the procfile it didn't say web: python3 app.py, it was another nonexistant python file. This wasn't immediately obvious to me and caused a brief moment of frustration.
+Another issue arose when I was hosting my project, and that was that my Procile was incorrect. For some reason, when I created the procfile it didn't say web: python3 app.py, it was another nonexistent python file. This wasn't immediately obvious to me and caused a brief moment of frustration.
 
 
 ## Credits
